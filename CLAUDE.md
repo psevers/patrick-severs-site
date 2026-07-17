@@ -28,3 +28,12 @@ Personal marketing/portfolio site for Patrick Severs — job-search-facing, repl
 ## Stack
 
 Static HTML/CSS/JS, no build step. Deploy target: Cloudflare Pages.
+
+## Deployment (v1 shipped 2026-07-17)
+
+- Cloudflare Pages project: `patrick-severs-site` (account: pvsevers@gmail.com).
+- Live at: https://patricksevers.com (custom domain, propagating) and https://patrick-severs-site.pages.dev (always-on fallback).
+- Redeploy: `npx wrangler pages deploy src --project-name=patrick-severs-site` from the project root (requires `wrangler login` once per machine).
+- Cloudflare Web Analytics: enabled via automatic setup (same-account hostname), no manual snippet needed.
+- Resume PDF regenerated via `python3 scripts/build_resume.py` (writes `src/assets/pdf/patrick-severs-resume.pdf`).
+- Still open: full career-progression color/context from Patrick (companies/dates sourced from his LinkedIn PDF export; the "why" behind each era still needs his input), and a mobile-viewport spot check on a real phone (couldn't get a reliable narrow-viewport screenshot in this environment).
