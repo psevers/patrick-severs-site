@@ -200,7 +200,7 @@ button { font-family: inherit; cursor: pointer; }
 :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 .nav-toggle { display: none; }
 
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .nav-links { display: none; }
   .nav-toggle {
     display: inline-flex;
