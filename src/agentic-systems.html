@@ -69,7 +69,19 @@
       <li><strong>Security that found real bugs.</strong> A SQL injection patched with an ID guard at every call site, and a token-refresh blind spot that had left monitoring falsely healthy — closed.</li>
     </ul>
 
-    <h2><span class="num">04 —</span>Built by hand: code I wrote and debugged myself</h2>
+    <h2><span class="num">04 —</span>The stack, for the technically curious</h2>
+    <p>Turborepo and Bun workspaces, TypeScript 7 RC on the native Go compiler, and Effect Schema enforced at every trust boundary: LLM output, external APIs, HTTP bodies, and the shared memory engine's write path. Oxlint runs correctness-only and blocks CI; Oxfmt handles formatting locally, deliberately not a gate. A supply-chain control sets a seven-day minimum publish age on new dependencies, so a same-day-published, potentially compromised package can't be pulled in by accident.</p>
+    <ul>
+      <li><strong>Tests exist, not just claims.</strong> Every one of the eight packages in the monorepo ships its own test suite.</li>
+      <li><strong>66 real commits</strong> in the monorepo's history, each with a message that explains the reasoning, not one squashed dump.</li>
+      <li><strong>CI beyond lint and build.</strong> Separate workflows for deploy and post-deploy safety checks, not just a green checkmark on merge.</li>
+    </ul>
+    <div class="callout reveal">
+      <span class="label">On the code itself</span>
+      The fleet's production monorepo is private, and it stays that way as-is: G2i workspace data (department notes, real prospect names, internal strategy) lives alongside the agent code, and that isn't mine to publish. I'm carving out the generic, business-logic-free piece, the shared agent-memory engine, into its own sanitized public repo. Linked here the day it ships.
+    </div>
+
+    <h2><span class="num">05 —</span>Built by hand: code I wrote and debugged myself</h2>
     <p>The fleet shows I can direct engineering. This shows I can also write and debug code directly — which is what lets me hold the bar instead of taking an agent's word for it.</p>
     <ul>
       <li>Diagnosed a data-layer constraint and moved the integration to the correct HTTP API myself — the fix is in the commit history under my name, with the reasoning in the message.</li>
@@ -77,7 +89,7 @@
       <li>Root-caused a nightly pipeline that had been failing silently for weeks — the monitoring said healthy, the data said otherwise. Fixed the pipeline and the monitoring gap that hid it.</li>
     </ul>
 
-    <h2><span class="num">05 —</span>Eight weeks, still moving</h2>
+    <h2><span class="num">06 —</span>Eight weeks, still moving</h2>
     <p>This is a live arc, not a finished portfolio piece: from ad hoc scripts to a documented, cost-governed, security-reviewed system with a real rollback plan — built while running go-to-market full time, not instead of it.</p>
   </div>
 </div>
