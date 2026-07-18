@@ -281,7 +281,7 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- hero grid + revenue-brain visual ---------- */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.1fr 1fr;
   gap: var(--space-8);
   align-items: center;
 }
