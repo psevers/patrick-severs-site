@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v2
+**Document version:** v3
 **Last updated:** 2026-07-18
 
 > Note: this isn't a B2B SaaS product — it's Patrick Severs' personal portfolio/job-search site (patricksevers.com), replacing a traditional resume. Sections below are adapted accordingly: "customer" = a hiring leader evaluating Patrick as a candidate, "competitors" = other candidates for the same class of role, "conversion action" = book time / consider him for a role.
@@ -18,7 +18,7 @@
 **Primary use case:** Evaluating Patrick as a GTM leadership hire — specifically whether he has both the revenue-leadership track record AND real technical fluency with agentic/AI-native operating models (not just "used AI" resume-inflation).
 **Jobs to be done:**
 - Verify a real, numbers-backed revenue/GTM leadership track record (not just titles)
-- Verify the "technical operator" claim is real, not resume padding (governs a production agent fleet, writes and debugs code himself, real CI/security discipline)
+- Verify the "AI operator" claim is real, not resume padding (governs a production agent fleet, diagnoses problems and directs the fix while agents write the code, real CI/security discipline)
 - Get a read on judgment, communication style, and voice directly from the writing, since this site IS a work sample
 **Use cases:**
 - A hiring manager sourced via LinkedIn clicks through to vet before a screening call
@@ -47,7 +47,7 @@
 ## Differentiation
 **Key differentiators:**
 - Real revenue outcomes with real numbers (122% YoY growth, 2.7× a quarter vs. a prior year, 21.7× EBITDA growth, 4 business lines built from 1)
-- A real, production, cost-governed, security-reviewed multi-agent fleet he directs and partly writes/debugs code for himself — not a claim, a public repo (severs-agent-shared) and named specific fixes back it up
+- A real, production, cost-governed, security-reviewed multi-agent fleet he directs, not codes himself — he diagnoses problems and gives direction, his agents (Emma, principal engineer agent) write and ship the code — not a claim, a public repo (severs-agent-shared) and named specific fixes back it up
 - Recent (last 3 years), not dated — the AI-native chapter is his most current and most relevant experience
 **How we do it differently:** Most candidates pick one lane (GTM or technical). This site's entire structure (three pillars, each with a deep-dive) is built to prove both are real and connected — the agent fleet is what made him efficient as a GTM operator, not a side hobby.
 **Why that's better:** A hiring leader gets verifiable proof instead of a claim, on both halves of the hybrid pitch.
@@ -103,5 +103,6 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v3 (2026-07-18) — Major correction: Patrick does not write or debug code himself, anywhere, including the "Products I've Built" projects. His agents (principally Emma, his principal engineer agent) write and ship all code; his actual skill is diagnosing problems, giving clear direction, and holding the quality bar. Removed the "writes and debugs code himself" claim from Jobs to Be Done and Differentiation.
 - v2 (2026-07-18) — Sharpened the one-liner to Patrick's own phrasing ("a GTM leader who is also an AI operator"); corrected the conversion-action hierarchy — resume is the low-friction primary ask, "Book time" is a high-value secondary CTA, not co-equal with resume/LinkedIn.
 - v1 (2026-07-18) — Initial context, auto-drafted from the site's CLAUDE.md decisions log, current copy, and this session's hero/positioning conversation with Patrick.
