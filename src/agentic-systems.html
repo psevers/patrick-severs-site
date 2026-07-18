@@ -37,7 +37,7 @@
   <div class="doc-header">
     <div class="eyebrow">AGENTIC SYSTEMS · BUILDER RECORD</div>
     <h1>A GTM leader who is also an AI operator.</h1>
-    <p class="dek">I run a production multi-agent system for my own go-to-market org: seven cloud-deployed agents with their own repos, CI, cost governance, and security review, plus the leadership dashboard I run my own quarterly goals from. When the work calls for it, I write and debug the code myself.</p>
+    <p class="dek">Seven agents run the operating work of my GTM job: reporting, chief-of-staff tasks, marketing and social-selling content, and the internal tooling (wikis, dashboards, the "revenue brain" I operate from) that Emma, my principal engineer agent, builds and maintains under my direction. When the work calls for it, I write and debug the code myself.</p>
   </div>
 
   <div class="stat-row">
@@ -52,7 +52,7 @@
     <p>Seven agents can look empty on their own. What sets the work apart is the discipline around it: CI gates that enforce cost and model-routing policy, a security review that caught and fixed a real injection bug, incident postmortems (including a cron pipeline that had gone silently dead), and a record of rejecting work that wasn't good enough, including my own AI's.</p>
 
     <h2><span class="num">02:</span>Flagship: the Rocks dashboard</h2>
-    <p>I run my quarterly goals off it, and twice a week it drafts the standup report to leadership. It replaced an unreliable tool I couldn't fix. I chose to replace it rather than patch it.</p>
+    <p>Built by Emma, my principal engineer agent, under my direction: I made the architecture calls, she wrote the code. That's what directing engineering looks like as an operator, not a coder. I run my quarterly goals off it, and twice a week it drafts the standup report to leadership. It replaced an unreliable tool I couldn't fix. I chose to replace it rather than patch it.</p>
     <ul>
       <li><strong>Spec before code.</strong> The architecture-decisions table chose relational SQL over key-value and over direct Postgres, with the reasoning written down, not improvised after the fact. "Show me all blocked actions across all rocks" is one query against a real schema.</li>
       <li><strong>Killed complexity on purpose.</strong> Removed a Box-note sync and a spreadsheet so there was no external sync to maintain. Choosing to remove a feature to protect one source of truth is a judgment call, and I made it deliberately.</li>
