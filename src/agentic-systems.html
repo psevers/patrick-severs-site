@@ -36,13 +36,13 @@
 <div class="doc-shell">
   <div class="doc-header">
     <div class="eyebrow">AGENTIC SYSTEMS · BUILDER RECORD</div>
-    <h1>A GTM leader who operates like a technical founder.</h1>
+    <h1>A GTM leader who is also an AI operator.</h1>
     <p class="dek">I run a production multi-agent system for my own go-to-market org: seven cloud-deployed agents with their own repos, CI, cost governance, and security review, plus the leadership dashboard I run my own quarterly goals from. When the work calls for it, I write and debug the code myself.</p>
   </div>
 
   <div class="stat-row">
     <div class="stat-tile"><div class="stat-number">7</div><div class="stat-label">Agents in production, each its own cloud service</div></div>
-    <div class="stat-tile"><div class="stat-number">71</div><div class="stat-label">Commits on the flagship dashboard, authored by me</div></div>
+    <div class="stat-tile"><div class="stat-number">8</div><div class="stat-label">Packages in the monorepo, each with its own tests</div></div>
     <div class="stat-tile"><div class="stat-number">4</div><div class="stat-label">Production bugs caught in my own review loop</div></div>
     <div class="stat-tile"><div class="stat-number">0</div><div class="stat-label">Autonomous sends: every draft waits for approval</div></div>
   </div>
@@ -73,7 +73,7 @@
     <p>Turborepo and Bun workspaces, TypeScript 7 RC on the native Go compiler, and Effect Schema enforced at every trust boundary: LLM output, external APIs, HTTP bodies, and the shared memory engine's write path. Oxlint runs correctness-only and blocks CI; Oxfmt handles formatting locally, deliberately not a gate. A supply-chain control sets a seven-day minimum publish age on new dependencies, so a same-day-published, potentially compromised package can't be pulled in by accident.</p>
     <ul>
       <li><strong>Tests exist, not just claims.</strong> Every one of the eight packages in the monorepo ships its own test suite.</li>
-      <li><strong>66 real commits</strong> in the monorepo's history, each with a message that explains the reasoning, not one squashed dump.</li>
+      <li><strong>Real, incremental commit history</strong> in the monorepo, each message explaining the reasoning, not one squashed dump.</li>
       <li><strong>CI beyond lint and build.</strong> Separate workflows for deploy and post-deploy safety checks, not just a green checkmark on merge.</li>
     </ul>
     <p>The shared memory engine every agent builds on is public. Real git history, 75 tests, and it never touched business data to begin with, so there was nothing to redact: <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet, including the Rocks dashboard and each agent's business logic, stays private.</p>
