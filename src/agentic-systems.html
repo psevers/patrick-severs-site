@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agentic Systems — Patrick Severs</title>
-<meta name="description" content="I run a production multi-agent system for my own GTM org — seven cloud-deployed agents with their own repos, CI, cost governance, and security review.">
+<title>Agentic Systems: Patrick Severs</title>
+<meta name="description" content="I run a production multi-agent system for my own GTM org: seven cloud-deployed agents with their own repos, CI, cost governance, and security review.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a7d3e'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='54' font-weight='700' fill='%23faf9f6' text-anchor='middle'%3E%3E_%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,57 +37,57 @@
   <div class="doc-header">
     <div class="eyebrow">AGENTIC SYSTEMS · BUILDER RECORD</div>
     <h1>A GTM leader who operates like a technical founder.</h1>
-    <p class="dek">I run a production multi-agent system for my own go-to-market org: seven cloud-deployed agents with their own repos, CI, cost governance, and security review — plus the leadership dashboard I run my own quarterly goals from. When the work calls for it, I write and debug the code myself.</p>
+    <p class="dek">I run a production multi-agent system for my own go-to-market org: seven cloud-deployed agents with their own repos, CI, cost governance, and security review, plus the leadership dashboard I run my own quarterly goals from. When the work calls for it, I write and debug the code myself.</p>
   </div>
 
   <div class="stat-row">
     <div class="stat-tile"><div class="stat-number">7</div><div class="stat-label">Agents in production, each its own cloud service</div></div>
     <div class="stat-tile"><div class="stat-number">71</div><div class="stat-label">Commits on the flagship dashboard, authored by me</div></div>
     <div class="stat-tile"><div class="stat-number">4</div><div class="stat-label">Production bugs caught in my own review loop</div></div>
-    <div class="stat-tile"><div class="stat-number">0</div><div class="stat-label">Autonomous sends — every draft waits for approval</div></div>
+    <div class="stat-tile"><div class="stat-number">0</div><div class="stat-label">Autonomous sends: every draft waits for approval</div></div>
   </div>
 
   <div class="doc-body">
-    <h2><span class="num">01 —</span>The differentiator: governance and judgment, not "I used AI"</h2>
-    <p>Seven agents can look empty on their own. What sets the work apart is the discipline around it: CI gates that enforce cost and model-routing policy, a security review that caught and fixed a real injection bug, incident postmortems — including a cron pipeline that had gone silently dead — and a record of rejecting work that wasn't good enough, including my own AI's.</p>
+    <h2><span class="num">01:</span>The differentiator: governance and judgment, not "I used AI"</h2>
+    <p>Seven agents can look empty on their own. What sets the work apart is the discipline around it: CI gates that enforce cost and model-routing policy, a security review that caught and fixed a real injection bug, incident postmortems (including a cron pipeline that had gone silently dead), and a record of rejecting work that wasn't good enough, including my own AI's.</p>
 
-    <h2><span class="num">02 —</span>Flagship: the Rocks dashboard</h2>
-    <p>I run my quarterly goals off it, and twice a week it drafts the standup report to leadership. It replaced an unreliable tool I couldn't fix — I chose to replace it rather than patch it.</p>
+    <h2><span class="num">02:</span>Flagship: the Rocks dashboard</h2>
+    <p>I run my quarterly goals off it, and twice a week it drafts the standup report to leadership. It replaced an unreliable tool I couldn't fix. I chose to replace it rather than patch it.</p>
     <ul>
       <li><strong>Spec before code.</strong> The architecture-decisions table chose relational SQL over key-value and over direct Postgres, with the reasoning written down, not improvised after the fact. "Show me all blocked actions across all rocks" is one query against a real schema.</li>
       <li><strong>Killed complexity on purpose.</strong> Removed a Box-note sync and a spreadsheet so there was no external sync to maintain. Choosing to remove a feature to protect one source of truth is a judgment call, and I made it deliberately.</li>
-      <li><strong>Rejected a false "done."</strong> An early build looked finished but hid broken states behind a clean screen. I sent it back for a full rebuild — a demo that hides broken states isn't a working system, and knowing the difference is the whole point.</li>
-      <li><strong>Real safety engineering.</strong> Optimistic concurrency after a data-safety review, idempotency guards so a cron can't double-fire, and a nightly pipeline that had 404'd silently for weeks — root-caused and fixed. Catching what fails quietly is the harder skill.</li>
+      <li><strong>Rejected a false "done."</strong> An early build looked finished but hid broken states behind a clean screen. I sent it back for a full rebuild. A demo that hides broken states isn't a working system, and knowing the difference is the whole point.</li>
+      <li><strong>Real safety engineering.</strong> Optimistic concurrency after a data-safety review, idempotency guards so a cron can't double-fire, and a nightly pipeline that had 404'd silently for weeks, root-caused and fixed. Catching what fails quietly is the harder skill.</li>
     </ul>
 
-    <h2><span class="num">03 —</span>The systems case: a governed agent fleet</h2>
+    <h2><span class="num">03:</span>The systems case: a governed agent fleet</h2>
     <p>Seven agents, each its own cloud service with its own repo and CI, later migrated into a monorepo with a documented rollback plan and a health-gated cutover. This is the shape of the actual job.</p>
     <ul>
       <li><strong>Governance over count.</strong> A written rule for when to stand up a new agent versus extend one, so the fleet doesn't sprawl.</li>
       <li><strong>Cost as policy, not preference.</strong> The build fails if an unannotated top-tier model call appears on a mechanical or cron path.</li>
       <li><strong>One comms voice.</strong> Only one agent talks to people. Integration ownership follows the home system, so five services don't end up holding the same credential.</li>
-      <li><strong>Security that found real bugs.</strong> A SQL injection patched with an ID guard at every call site, and a token-refresh blind spot that had left monitoring falsely healthy — closed.</li>
+      <li><strong>Security that found real bugs.</strong> A SQL injection patched with an ID guard at every call site, and a token-refresh blind spot that had left monitoring falsely healthy. Both closed.</li>
     </ul>
 
-    <h2><span class="num">04 —</span>The stack, for the technically curious</h2>
+    <h2><span class="num">04:</span>The stack, for the technically curious</h2>
     <p>Turborepo and Bun workspaces, TypeScript 7 RC on the native Go compiler, and Effect Schema enforced at every trust boundary: LLM output, external APIs, HTTP bodies, and the shared memory engine's write path. Oxlint runs correctness-only and blocks CI; Oxfmt handles formatting locally, deliberately not a gate. A supply-chain control sets a seven-day minimum publish age on new dependencies, so a same-day-published, potentially compromised package can't be pulled in by accident.</p>
     <ul>
       <li><strong>Tests exist, not just claims.</strong> Every one of the eight packages in the monorepo ships its own test suite.</li>
       <li><strong>66 real commits</strong> in the monorepo's history, each with a message that explains the reasoning, not one squashed dump.</li>
       <li><strong>CI beyond lint and build.</strong> Separate workflows for deploy and post-deploy safety checks, not just a green checkmark on merge.</li>
     </ul>
-    <p>The shared memory engine every agent builds on is public — real git history, 75 tests, and it never touched business data to begin with, so there was nothing to redact: <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet, including the Rocks dashboard and each agent's business logic, stays private.</p>
+    <p>The shared memory engine every agent builds on is public. Real git history, 75 tests, and it never touched business data to begin with, so there was nothing to redact: <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet, including the Rocks dashboard and each agent's business logic, stays private.</p>
 
-    <h2><span class="num">05 —</span>Built by hand: code I wrote and debugged myself</h2>
-    <p>The fleet shows I can direct engineering. This shows I can also write and debug code directly — which is what lets me hold the bar instead of taking an agent's word for it.</p>
+    <h2><span class="num">05:</span>Built by hand: code I wrote and debugged myself</h2>
+    <p>The fleet shows I can direct engineering. This shows I can also write and debug code directly, which is what lets me hold the bar instead of taking an agent's word for it.</p>
     <ul>
-      <li>Diagnosed a data-layer constraint and moved the integration to the correct HTTP API myself — the fix is in the commit history under my name, with the reasoning in the message.</li>
+      <li>Diagnosed a data-layer constraint and moved the integration to the correct HTTP API myself. The fix is in the commit history under my name, with the reasoning in the message.</li>
       <li>Applied optimistic concurrency and idempotency guards after a self-initiated data-safety review, closing a double-fire risk in a scheduled job before it caused a production incident.</li>
-      <li>Root-caused a nightly pipeline that had been failing silently for weeks — the monitoring said healthy, the data said otherwise. Fixed the pipeline and the monitoring gap that hid it.</li>
+      <li>Root-caused a nightly pipeline that had been failing silently for weeks. The monitoring said healthy, the data said otherwise. Fixed the pipeline and the monitoring gap that hid it.</li>
     </ul>
 
-    <h2><span class="num">06 —</span>Eight weeks, still moving</h2>
-    <p>This is a live arc, not a finished portfolio piece: from ad hoc scripts to a documented, cost-governed, security-reviewed system with a real rollback plan — built while running go-to-market full time, not instead of it.</p>
+    <h2><span class="num">06:</span>Eight weeks, still moving</h2>
+    <p>This is a live arc, not a finished portfolio piece: from ad hoc scripts to a documented, cost-governed, security-reviewed system with a real rollback plan, built while running go-to-market full time, not instead of it.</p>
   </div>
 </div>
 
@@ -97,7 +97,7 @@
       <img src="assets/images/headshot.png" alt="Patrick Severs" class="footer-photo">
       <div class="footer-text">
         <h2>Let's talk.</h2>
-        <p>Hiring GTM leadership, need managed AI engineering teams, or just want to talk shop on agentic workflows — I'm easy to find.</p>
+        <p>Hiring GTM leadership, need managed AI engineering teams, or just want to talk shop on agentic workflows. I'm easy to find.</p>
         <div class="footer-links">
           <a href="https://calendar.app.google/DJfJDwJz4SbvFGMg6" class="btn btn-primary" target="_blank" rel="noopener">Book time →</a>
           <a href="mailto:pvsevers@gmail.com" class="btn btn-secondary">pvsevers@gmail.com</a>
