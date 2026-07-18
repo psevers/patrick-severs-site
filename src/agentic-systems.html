@@ -76,6 +76,7 @@
       <li><strong>66 real commits</strong> in the monorepo's history, each with a message that explains the reasoning, not one squashed dump.</li>
       <li><strong>CI beyond lint and build.</strong> Separate workflows for deploy and post-deploy safety checks, not just a green checkmark on merge.</li>
     </ul>
+    <p>The shared memory engine every agent builds on is public — real git history, 75 tests, and it never touched business data to begin with, so there was nothing to redact: <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet, including the Rocks dashboard and each agent's business logic, stays private.</p>
 
     <h2><span class="num">05 —</span>Built by hand: code I wrote and debugged myself</h2>
     <p>The fleet shows I can direct engineering. This shows I can also write and debug code directly — which is what lets me hold the bar instead of taking an agent's word for it.</p>
