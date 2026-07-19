@@ -49,7 +49,7 @@
   --duration-normal: 300ms;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --max-width: 1120px;
+  --max-width: 1360px;
 }
 
 :root[data-theme="dark"] {
@@ -281,8 +281,8 @@ button { font-family: inherit; cursor: pointer; }
 /* ---------- hero grid + revenue-brain visual ---------- */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: var(--space-8);
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--space-12);
   align-items: center;
 }
 @media (max-width: 1000px) {
