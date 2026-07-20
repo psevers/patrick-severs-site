@@ -37,3 +37,17 @@ Static HTML/CSS/JS, no build step. Deploy target: Cloudflare Pages.
 - Cloudflare Web Analytics: enabled via automatic setup (same-account hostname), no manual snippet needed.
 - Resume PDF regenerated via `python3 scripts/build_resume.py` (writes `src/assets/pdf/patrick-severs-resume.pdf`).
 - Still open: full career-progression color/context from Patrick (companies/dates sourced from his LinkedIn PDF export; the "why" behind each era still needs his input), and a mobile-viewport spot check on a real phone (couldn't get a reliable narrow-viewport screenshot in this environment).
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical roles, default label strings (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context — `CONTEXT.md` + `docs/adr/` at repo root. See `docs/agents/domain.md`.
