@@ -599,12 +599,18 @@ section { padding-block: var(--space-section); }
 }
 
 /* ---------- reveal on scroll ---------- */
+/* .reveal is visible by default; JS opts elements into the hidden-until-intersect
+   state via .reveal-pending, so content never depends on JS to become visible. */
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
+  opacity: 1;
+  transform: none;
   transition: opacity 700ms var(--ease-out-expo), transform 700ms var(--ease-out-expo);
 }
-.reveal.is-visible {
+.reveal.reveal-pending {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.reveal.reveal-pending.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
