@@ -78,6 +78,8 @@
               .rb-caption { font-family: var(--font-sans); font-style: italic; font-size: 12px; fill: var(--color-ink-faint); }
               .rb-hub { fill: var(--color-bg-raised); stroke: var(--color-accent); stroke-width: 2; }
               .rb-typed { font-family: var(--font-mono); font-size: 7px; fill: var(--color-accent); }
+              .rb-signal { fill: none; stroke: var(--color-accent); stroke-width: 2.5; stroke-linecap: round; opacity: 0.85; stroke-dasharray: 5 95; animation: signal-flow 3.2s linear infinite; }
+              @keyframes signal-flow { to { stroke-dashoffset: -100; } }
             </style>
 
             <text x="20" y="28" class="rb-eyebrow">THE REVENUE BRAIN</text>
@@ -90,6 +92,13 @@
             <path d="M150,256 Q175,256 200,218" class="rb-line"></path>
             <path d="M150,294 Q175,294 200,218" class="rb-line"></path>
             <path d="M150,332 Q175,332 200,218" class="rb-line"></path>
+            <path d="M150,104 Q175,104 200,218" class="rb-signal" pathLength="100" style="animation-delay:0s"></path>
+            <path d="M150,142 Q175,142 200,218" class="rb-signal" pathLength="100" style="animation-delay:0.4s"></path>
+            <path d="M150,180 Q175,180 200,218" class="rb-signal" pathLength="100" style="animation-delay:0.8s"></path>
+            <path d="M150,218 Q175,218 200,218" class="rb-signal" pathLength="100" style="animation-delay:1.2s"></path>
+            <path d="M150,256 Q175,256 200,218" class="rb-signal" pathLength="100" style="animation-delay:1.6s"></path>
+            <path d="M150,294 Q175,294 200,218" class="rb-signal" pathLength="100" style="animation-delay:2.0s"></path>
+            <path d="M150,332 Q175,332 200,218" class="rb-signal" pathLength="100" style="animation-delay:2.4s"></path>
             <circle cx="175" cy="104" r="1.8" class="rb-dot" opacity="0.6"></circle>
             <circle cx="175" cy="142" r="1.8" class="rb-dot" opacity="0.6"></circle>
             <circle cx="175" cy="180" r="1.8" class="rb-dot" opacity="0.6"></circle>
@@ -101,6 +110,8 @@
             <!-- hub -> models -->
             <path d="M310,218 Q325,164 340,164" class="rb-line"></path>
             <path d="M310,218 Q325,272 340,272" class="rb-line"></path>
+            <path d="M310,218 Q325,164 340,164" class="rb-signal" pathLength="100" style="animation-delay:0.6s"></path>
+            <path d="M310,218 Q325,272 340,272" class="rb-signal" pathLength="100" style="animation-delay:1.8s"></path>
 
             <!-- models -> junction -> outcomes -->
             <path d="M430,164 Q440,164 440,218" class="rb-line"></path>
@@ -110,6 +121,12 @@
             <path d="M440,218 Q442,186 445,186" class="rb-line"></path>
             <path d="M440,218 Q442,250 445,250" class="rb-line"></path>
             <path d="M440,218 Q442,314 445,314" class="rb-line"></path>
+            <path d="M430,164 Q440,164 440,218" class="rb-signal" pathLength="100" style="animation-delay:1.0s"></path>
+            <path d="M430,272 Q440,272 440,218" class="rb-signal" pathLength="100" style="animation-delay:2.2s"></path>
+            <path d="M440,218 Q442,122 445,122" class="rb-signal" pathLength="100" style="animation-delay:1.4s"></path>
+            <path d="M440,218 Q442,186 445,186" class="rb-signal" pathLength="100" style="animation-delay:2.6s"></path>
+            <path d="M440,218 Q442,250 445,250" class="rb-signal" pathLength="100" style="animation-delay:0.2s"></path>
+            <path d="M440,218 Q442,314 445,314" class="rb-signal" pathLength="100" style="animation-delay:2.8s"></path>
 
             <!-- input pills -->
             <rect x="20" y="90" width="130" height="28" rx="14" class="rb-pill"></rect>
@@ -251,6 +268,8 @@
           .node-label { font-family: 'IBM Plex Mono', monospace; font-size: 15px; fill: var(--color-ink); font-weight: 600; }
           .node-sub { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; fill: var(--color-ink-faint); }
           .flow-line { stroke: var(--color-accent); stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+          .flow-signal { fill: none; stroke: var(--color-accent); stroke-width: 3; stroke-linecap: round; opacity: 0.85; stroke-dasharray: 4 96; animation: signal-flow 3.6s linear infinite; }
+          @keyframes signal-flow { to { stroke-dashoffset: -100; } }
         </style>
 
         <rect x="20" y="90" width="200" height="80" rx="10" class="node-box accent"></rect>
@@ -258,6 +277,7 @@
         <text x="120" y="142" text-anchor="middle" class="node-sub">pipeline, forecast, targets</text>
 
         <path d="M220,130 H340" class="flow-line"></path>
+        <path d="M220,130 H340" class="flow-signal" pathLength="100" style="animation-delay:0s"></path>
 
         <rect x="340" y="30" width="240" height="200" rx="10" class="node-box accent"></rect>
         <text x="460" y="65" text-anchor="middle" class="node-label">7-agent fleet</text>
@@ -269,12 +289,14 @@
         <text x="460" y="200" text-anchor="middle" class="node-sub" style="fill:var(--color-accent);">human approves every send</text>
 
         <path d="M580,130 H700" class="flow-line"></path>
+        <path d="M580,130 H700" class="flow-signal" pathLength="100" style="animation-delay:1.2s"></path>
 
         <rect x="700" y="90" width="200" height="80" rx="10" class="node-box accent"></rect>
         <text x="800" y="122" text-anchor="middle" class="node-label">Revenue outcomes</text>
         <text x="800" y="142" text-anchor="middle" class="node-sub">deals, forecast accuracy</text>
 
         <path d="M800,170 C800,240 120,240 120,170" class="flow-line"></path>
+        <path d="M800,170 C800,240 120,240 120,170" class="flow-signal" pathLength="100" style="animation-delay:2.4s"></path>
       </svg>
     </div>
     <div class="diagram-caption">the loop: strategy sets direction, the fleet executes the operating work, outcomes feed back into strategy, and every send still waits on me.</div>
