@@ -44,4 +44,21 @@
       observer.observe(el);
     });
   }
+
+  var typedCmd = document.getElementById('hero-typed-cmd');
+  if (typedCmd) {
+    var HERO_COMMAND = '$ agents --status';
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      typedCmd.textContent = HERO_COMMAND;
+    } else {
+      var charIndex = 0;
+      var typeInterval = setInterval(function () {
+        charIndex++;
+        var caret = charIndex < HERO_COMMAND.length ? '█' : '';
+        typedCmd.textContent = HERO_COMMAND.slice(0, charIndex) + caret;
+        if (charIndex >= HERO_COMMAND.length) clearInterval(typeInterval);
+      }, 55);
+    }
+  }
 })();
