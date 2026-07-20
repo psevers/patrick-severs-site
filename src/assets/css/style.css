@@ -3,8 +3,6 @@
    Terminal/markdown-native design system. Light primary, dark toggle.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-
 :root {
   --color-bg: #faf9f6;
   --color-bg-raised: #ffffff;
