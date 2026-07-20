@@ -39,8 +39,9 @@
       },
       { threshold: 0.12 }
     );
-    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('reveal-pending');
+      observer.observe(el);
+    });
   }
 })();
