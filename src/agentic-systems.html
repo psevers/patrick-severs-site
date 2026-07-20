@@ -89,6 +89,33 @@
       <li><strong>Real, incremental commit history</strong> in the monorepo, each message explaining the reasoning, not one squashed dump.</li>
       <li><strong>CI beyond lint and build.</strong> Separate workflows for deploy and post-deploy safety checks, not just a green checkmark on merge.</li>
     </ul>
+    <p>The Effect Schema trust boundary in practice: every LLM reply is decoded against a schema before anything downstream can touch it, and a bad reply throws instead of silently propagating malformed data.</p>
+    <div class="code-snippet">
+      <span class="code-label">llm.ts — fleet-shared, from severs-agent-shared</span>
+      <pre><span class="tok-comment">// Parse + validate a STRICT-JSON LLM reply. Throws on failure — the full</span>
+<span class="tok-comment">// diagnostic goes to the server log only, never back into the response.</span>
+<span class="tok-keyword">export function</span> decodeLlmJson&lt;A, I&gt;(
+  schema: Schema.Schema&lt;A, I, never&gt;,
+  raw: <span class="tok-type">string</span>,
+  label: <span class="tok-type">string</span>
+): A {
+  <span class="tok-keyword">const</span> candidate = extractJsonCandidate(raw);
+  <span class="tok-keyword">if</span> (candidate === <span class="tok-keyword">null</span>) {
+    <span class="tok-keyword">throw new</span> Error(<span class="tok-string">`${label}: no JSON object found in LLM response`</span>);
+  }
+
+  <span class="tok-keyword">const</span> result = Schema.decodeUnknownEither(
+    Schema.parseJson(schema),
+    { errors: <span class="tok-string">'all'</span> }
+  )(candidate);
+
+  <span class="tok-keyword">if</span> (Either.isLeft(result)) {
+    console.warn(<span class="tok-string">`[llm decode] ${label}: ${formatError(result.left)}`</span>);
+    <span class="tok-keyword">throw new</span> Error(<span class="tok-string">`${label}: LLM response failed schema validation`</span>);
+  }
+  <span class="tok-keyword">return</span> result.right;
+}</pre>
+    </div>
     <p>The shared memory engine every agent builds on is public. Real git history, 75 tests, and it never touched business data to begin with, so there was nothing to redact: <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet, including the Rocks dashboard and each agent's business logic, stays private.</p>
 
     <h2><span class="num">05:</span>What I actually do: diagnose, direct, hold the bar</h2>
