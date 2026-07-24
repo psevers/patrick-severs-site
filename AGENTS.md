@@ -11,3 +11,4 @@ Patrick's public marketing/portfolio site — job-search-facing, replaces a trad
 - Design, positioning, and content decisions: `docs/decisions.md`.
 - Deploy/analytics runbook and open items: `docs/deploy.md`.
 - Issue tracker (`gh`): `docs/agents/issue-tracker.md`. Triage labels: `docs/agents/triage-labels.md`. Domain docs (`CONTEXT.md` + `docs/adr/`): `docs/agents/domain.md`.
+- No test harness by design (static site, no build step) — `/implement` verifies in-browser instead of driving `/tdd`.

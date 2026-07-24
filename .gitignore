@@ -1,1 +1,3 @@
 .wrangler/
+.claude/worktrees/
+.DS_Store
