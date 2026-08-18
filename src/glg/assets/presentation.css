@@ -507,22 +507,46 @@ body.present-mode .stage {
     height: auto;
     padding: 0;
     overflow: visible;
+    counter-reset: deck-page;
   }
 
   .slide,
   .slide.active {
     display: flex !important;
     flex-direction: column;
+    position: relative;
     width: 13.333333in;
     height: 7.5in;
-    padding: .3in .38in .26in;
+    padding: .4in .52in .46in;
     overflow: hidden;
+    border-top: .08in solid var(--ink);
     break-after: page;
     page-break-after: always;
     animation: none;
+    counter-increment: deck-page;
     background-color: var(--paper);
     background-image: radial-gradient(circle, rgba(23, 36, 60, .13) 1px, transparent 1.2px);
     background-size: 22px 22px;
+  }
+
+  .slide::before,
+  .slide::after {
+    position: absolute;
+    bottom: .15in;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .12em;
+  }
+
+  .slide::before {
+    content: "PATRICK SEVERS  ·  GLG HUMAN DATA";
+    left: .52in;
+  }
+
+  .slide::after {
+    content: counter(deck-page, decimal-leading-zero);
+    right: .52in;
   }
 
   .slide:last-child {
@@ -530,10 +554,41 @@ body.present-mode .stage {
     page-break-after: auto;
   }
 
-  .slide h1 { font-size: 42px; }
-  .slide h2 { font-size: 28px; }
-  .kicker { font-size: 14px; }
-  .slide-body { margin-top: 14px; }
+  .slide > .eyebrow {
+    font-size: 12px;
+    letter-spacing: .14em;
+  }
+
+  .slide h1 {
+    max-width: 27ch;
+    margin-top: 8px;
+    font-size: 49px;
+    line-height: 1.02;
+  }
+
+  .slide h2 { font-size: 29px; }
+  .slide h3 { font-size: 16px; }
+  .kicker { max-width: 78ch; margin-top: 10px; font-size: 16px; line-height: 1.35; }
+  .deck-meta { margin-top: 12px; font-size: 13px; }
+  .slide-body { margin-top: 18px; gap: 16px; }
+  .small, .caption { font-size: 13px; }
+  p { margin: 7px 0; }
+  li { margin: 5px 0; }
+  .tight li { margin: 4px 0; }
+
+  .note,
+  .paper {
+    padding: 17px 19px;
+    box-shadow: 5px 5px 0 rgba(23, 36, 60, .12);
+  }
+
+  .marker { font-size: 25px; }
+  .proof,
+  .warning,
+  .rule {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
 
   .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -544,14 +599,122 @@ body.present-mode .stage {
   .flow-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .strip.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .strip.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .strip > div { border-right: 1px dashed var(--line); border-bottom: 0; }
+  .strip > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 18px;
+    border-right: 1px dashed var(--line);
+    border-bottom: 0;
+  }
   .strip > div:last-child { border-right: 0; }
+  .strip h3 { font-size: 23px; }
   .step:not(:last-child)::after { content: "→"; right: -18px; top: 28%; bottom: auto; }
   .org-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .org-row.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .fly-cycle {
+    width: 100%;
+    max-width: none;
+    flex: 1;
     grid-template-columns: 1fr 36px 1fr;
     grid-template-rows: 1fr 28px 1fr;
+    gap: 10px;
   }
   .fly-arrow { transform: none; }
+
+  #map h1 {
+    max-width: 25ch;
+    font-size: 56px;
+  }
+
+  #map .kicker { max-width: 70ch; font-size: 18px; }
+  #map .slide-body { justify-content: center; gap: 24px; }
+  #map .strip { min-height: 165px; }
+  #map .strip h3 { font-size: 27px; }
+  #map .strip .small { font-size: 14px; line-height: 1.45; }
+  #map .rule { padding: 16px 18px; font-size: 16px; }
+
+  #thesis .grid,
+  #sample .grid,
+  #focus .grid,
+  #limits .grid,
+  #enterprise .grid,
+  #hundred .grid,
+  #rules .grid {
+    flex: 1;
+  }
+
+  #thesis .note,
+  #sample .note,
+  #focus .note,
+  #limits .note,
+  #enterprise .note,
+  #hundred .note,
+  #rules .note {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #wedge .strip { flex: 1.1; }
+  #wedge .flow { flex: .9; align-items: stretch; }
+  #wedge .wedge-ex { font-size: 13px; line-height: 1.4; }
+  #wedge .step { min-height: 0; padding: 14px 8px; }
+  #wedge .step h3 { font-size: 21px; }
+
+  #sample .table-wrap { flex: 0 0 auto; }
+  #sample .sample-table { font-size: 12px; }
+  #sample .sample-table th,
+  #sample .sample-table td { padding: 8px; }
+
+  #gtm .fly-node {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 20px;
+  }
+  #gtm .fly-node h3 { font-size: 25px; }
+  #gtm .fly-node .small { font-size: 14px; line-height: 1.42; }
+  #gtm .fly-repeat { margin-top: 2px; font-size: 21px; }
+
+  #emails .grid { flex: 1; }
+  #emails .email-card { padding: 16px 18px; font-size: 13px; }
+  #emails .email-meta { padding-bottom: 10px; margin-bottom: 10px; }
+  #emails .email-body { font-size: 12px; line-height: 1.48; }
+
+  #limits .done-stack { gap: 18px; margin-top: 18px; }
+  #limits .done-item { grid-template-columns: 36px 1fr; gap: 14px; }
+  #limits .done-item .n { width: 32px; height: 32px; }
+  #limits .done-item p { font-size: 15px; }
+
+  #org .org {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    grid-template-rows: auto minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px;
+    overflow: hidden;
+  }
+  #org h1 { max-width: 36ch; }
+  #org .org-row { min-height: 0; gap: 12px; }
+  #org .org-box {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 14px;
+    overflow: hidden;
+  }
+  #org .org-top { min-width: 300px; padding: 12px 22px; }
+  #org .org-box h3 { font-size: 21px; }
+  #org .org-box .who { font-size: 12px; }
+
+  #enterprise .grid { gap: 16px; }
+  #enterprise .note { padding-inline: 22px; }
+
+  #plan .strip { flex: 1; }
+  #plan .strip > div { justify-content: flex-start; padding: 18px 20px; }
+  #plan .strip h3 { font-size: 25px; }
+
+  #rules .strip { min-height: 100px; }
 }
