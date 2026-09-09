@@ -31,3 +31,9 @@
 - Booking link is now https://calendly.com/pvsevers/30min; button copy "Book 30 min" on every page (30 minutes stated as a risk reducer).
 - Home page gains a mid-page CTA after the three receipts and an objections section (four objections, each linked to its receipt page) between testimonials and contact. Adapted from a 14-section sales-page framework; the salesy sections (consequences, urgency, false solutions) were rejected as off-brand.
 - Word-level deslop across all six pages: intensifier "real", "on purpose/deliberate", "stood up", "AI leverage" cut or varied. Hero headline, figures, and open rulings untouched.
+
+## 2026-09-09: objection 5 and Agent Company hold
+- Home objections block gains a fifth card, "Why did you leave G2i?": the company pivoted to a technology focus built on agentic orchestration and brought in new leadership to drive it; Patrick left July 2026. Patrick's own framing, no further detail.
+- Objections lede ("I've lost a final round on one of these") stays. Objection 1's "hired into each" (incl. finance) confirmed accurate.
+- **Agent Company storyline is on hold.** Patrick is not convinced by the case-study framing as written. Needs its own grill session before the page, the home receipt, and objection 3 are treated as final. Founder OK items (pilot count, link, "no decision on what to sell") remain open under this.
+- `scripts/site-gen/` is committed; `AGENTS.md` now says edit the generator, never `src/`.
