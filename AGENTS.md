@@ -8,6 +8,7 @@ Patrick's public marketing/portfolio site — job-search-facing, replaces a trad
 - Fair game only if Patrick already published it under his own name on LinkedIn: the "$10-15M → targeting $80M" framing; Microsoft/Meta/Coinbase/Discover as enterprise clients; the 122% / 2.7× / 21.7× ratios.
 
 ## Reference
+- Pages are generated: edit `scripts/site-gen/pages/*.html` and `gen.py` (shared head/nav/footer), then run `python3 scripts/site-gen/gen.py` to write `src/*.html`. Never edit `src/*.html` directly.
 - Design, positioning, and content decisions: `docs/decisions.md`.
 - Deploy/analytics runbook and open items: `docs/deploy.md`.
 - Issue tracker (`gh`): `docs/agents/issue-tracker.md`. Triage labels: `docs/agents/triage-labels.md`. Domain docs (`CONTEXT.md` + `docs/adr/`): `docs/agents/domain.md`.
