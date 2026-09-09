@@ -51,7 +51,7 @@
   <div class="container">
     <div class="eyebrow">How I operate &middot; rules, receipts, and the fleet</div>
     <h1>I don't write the code. I direct the people and the agents who do, and I hold the bar.</h1>
-    <p class="lede">Being an AI-driven leader isn't a tool preference. It's a set of operating rules, and each one below comes with the moment it was tested. Underneath the rules: the seven-agent fleet that runs my operating work, and the things built under my direction.</p>
+    <p class="lede">Being an AI-driven leader comes down to a set of operating rules. Each one below carries the moment it was tested. Underneath the rules: the seven-agent fleet that runs my operating work, and the things built under my direction.</p>
   </div>
 </header>
 
@@ -62,10 +62,10 @@
       <h2>Each one has a receipt.</h2>
     </div>
     <ol class="rules reveal">
-      <li class="rule"><h3>Direct, don't do.</h3><p>Agents write the code and the drafts. Emma, my principal engineer agent, ships the software. My job is to diagnose the real problem, give clear direction, and hold the line on quality until the fix is real, not just claimed.</p><div class="receipt"><b>receipt:</b> an early build of my goals dashboard looked finished but hid broken states behind a clean screen. I sent it back for a full rebuild. A demo that hides broken states isn't a working system.</div></li>
+      <li class="rule"><h3>Direct, don't do.</h3><p>Agents write the code and the drafts. Emma, my principal engineer agent, ships the software. My job is to diagnose the actual problem, give clear direction, and hold the line on quality until the fix is proven, not claimed.</p><div class="receipt"><b>receipt:</b> an early build of my goals dashboard looked finished but hid broken states behind a clean screen. I sent it back for a full rebuild. A demo that hides broken states isn't a working system.</div></li>
       <li class="rule"><h3>Interview before you task.</h3><p>Context, role, interview, then task. Give the AI the context and the role, then have it interview you before it produces anything. The output is better because the question got better. Credit where it's due: Geoff Woods, <em>The AI-Driven Leader</em>.</p><div class="receipt"><b>receipt:</b> this site's redesign came out of a ten-question interview I had my AI run on me, one question at a time, before a line of it was built. Two of my own assumptions didn't survive it.</div></li>
-      <li class="rule"><h3>Cost is policy, not preference.</h3><p>Model spend is governed in the build, not reviewed in a spreadsheet after the fact. A written rule decides when to stand up a new agent versus extend one, so the fleet doesn't sprawl.</p><div class="receipt"><b>receipt:</b> the build fails if an unannotated top-tier model call appears on a mechanical or scheduled path.</div></li>
-      <li class="rule"><h3>A human approves every send.</h3><p>Agents draft. People decide what leaves the building. Only one agent talks to people at all, and integration ownership follows the home system so five services don't hold the same credential.</p><div class="receipt"><b>receipt:</b> 0 autonomous sends across seven production agents. A security review found and closed a real SQL injection and a token-refresh blind spot that had left monitoring falsely healthy.</div></li>
+      <li class="rule"><h3>Cost is policy, not preference.</h3><p>Model spend is governed in the build, not reviewed in a spreadsheet after the fact. A written rule decides when to add a new agent versus extend one, so the fleet doesn't sprawl.</p><div class="receipt"><b>receipt:</b> the build fails if an unannotated top-tier model call appears on a mechanical or scheduled path.</div></li>
+      <li class="rule"><h3>A human approves every send.</h3><p>Agents draft. People decide what leaves the building. Only one agent talks to people at all, and integration ownership follows the home system so five services don't hold the same credential.</p><div class="receipt"><b>receipt:</b> 0 autonomous sends across seven production agents. A security review found and closed a SQL injection and a token-refresh blind spot that had left monitoring falsely healthy.</div></li>
       <li class="rule"><h3>Presence beats outbound.</h3><p>Go where the buyers already are, bring the expert, show the sample. The point of the agent savings is to afford being in the room.</p><div class="receipt"><b>receipt:</b> events were 59% of G2i's Q2 2026 leads (1,075 leads). Local-first beat email on response rate at The Agent Company.</div></li>
       <li class="rule"><h3>Catch what fails quietly.</h3><p>The hard failures announce themselves. The expensive ones don't. Idempotency guards so a scheduled job can't double-fire, optimistic concurrency after a data-safety review, and postmortems written down.</p><div class="receipt"><b>receipt:</b> a nightly pipeline had 404'd silently for weeks with monitoring reporting green. Root-caused, fixed, and the blind spot in the monitor closed with it.</div></li>
     </ol>
@@ -82,8 +82,8 @@
         </div>
         <div class="prose">
           <p>Reporting and pipeline analysis, chief-of-staff duties, marketing and social-selling drafts, and the internal tooling I run from: wikis, dashboards, the revenue brain. Each agent is its own cloud service with its own tests, migrated into a monorepo with a documented rollback plan and a health-gated cutover.</p>
-          <p><strong>The flagship</strong> is the Rocks dashboard. I run my quarterly goals off it and twice a week it drafts the leadership standup. Spec before code, relational SQL chosen over key-value with the reasoning written down, and a Box-note sync and a spreadsheet deliberately removed so there's one source of truth.</p>
-          <p><strong>What's public.</strong> The shared memory engine every agent builds on is open source: real git history, 75 tests, and it never touched business data. <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet stays private.</p>
+          <p><strong>The flagship</strong> is the Rocks dashboard. I run my quarterly goals off it and twice a week it drafts the leadership standup. Spec before code, relational SQL chosen over key-value with the reasoning written down, and a Box-note sync and a spreadsheet removed so there's one source of truth.</p>
+          <p><strong>What's public.</strong> The shared memory engine every agent builds on is open source: full git history, 75 tests, and it never touched business data. <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet stays private.</p>
         </div>
       </div>
       <div class="board">
@@ -133,9 +133,9 @@
     <div class="cards reveal">
       <div class="card"><div class="tag">For the business</div><h3>GTM knowledge base</h3><p>The structured knowledge base G2i's GTM team ran on. Scattered tribal knowledge turned into something searchable and durable. Named in one of the recommendations on the home page.</p><div class="meta">adopted team-wide</div></div>
       <div class="card"><div class="tag">For the business</div><h3>Internal cost-saving tool</h3><p>Replaced a paid third-party service the team relied on, keeping the workflow the team already knew and cutting a recurring annual cost.</p><div class="meta">~$1,800/yr saved</div></div>
-      <div class="card"><div class="tag">For a client</div><h3>The Agent Company's CRM</h3><p>A fully functional CRM stood up agentically in the first weeks of the engagement, replacing several stitched-together tools with one system of record.</p><div class="meta">see the <a href="agent-company.html">case study</a></div></div>
+      <div class="card"><div class="tag">For a client</div><h3>The Agent Company's CRM</h3><p>A working CRM built agentically in the first weeks of the engagement, replacing several stitched-together tools with one system of record.</p><div class="meta">see the <a href="agent-company.html">case study</a></div></div>
       <div class="card"><div class="tag">For my daughter</div><h3>Recruiting OS for a softball athlete</h3><p>A privacy-first recruiting operating system: a private, AI-assisted command center for the family plus an unlisted athlete profile for coaches. Prospects, performance data, outreach, in one place instead of spreadsheets and text threads.</p><div class="meta">Next.js, Supabase, strict privacy rails</div></div>
-      <div class="card"><div class="tag">For her team</div><h3>Fastpitch scorekeeping app</h3><p>A local-first iOS scorekeeping app for one team, built through six vertical slices ending in recovery and trust. Because the scorebook should survive a dropped phone.</p><div class="meta">Swift 6, SwiftUI &middot; <a href="https://github.com/psevers/softball-scoring" target="_blank" rel="noopener">public repo</a></div></div>
+      <div class="card"><div class="tag">For her team</div><h3>Fastpitch scorekeeping app</h3><p>A local-first iOS scorekeeping app for one team, built in six increments, the last of them crash recovery. Because the scorebook should survive a dropped phone.</p><div class="meta">Swift 6, SwiftUI &middot; <a href="https://github.com/psevers/softball-scoring" target="_blank" rel="noopener">public repo</a></div></div>
       <div class="card"><div class="tag">To learn in public</div><h3>The Forge: how models get post-trained</h3><p>A single-page explainer on post-training, written to make the seven techniques legible to a business leader. The kind of thing I'd hand a sales team before they sit with a research lab.</p><div class="meta">one page, one metaphor</div></div>
       <div class="card"><div class="tag">Personal</div><h3>Save-format reverse-engineering tool</h3><p>Directed the byte-by-byte reverse engineering of a closed, undocumented game save format to build a companion tool the game doesn't offer. No spec, no docs, just the file.</p><div class="meta">parsing, editing, re-serializing</div></div>
     </div>
@@ -177,10 +177,10 @@
       <img src="assets/images/headshot.png" alt="Patrick Severs" class="footer-photo" loading="lazy">
       <div class="footer-text">
         <h2>Let's talk.</h2>
-        <p>Standing up a human-data or AI-native service line and need someone to run it. Hiring a head of GTM or revenue. Or you want to talk through how the operating layer would look inside your business. Start with the resume, or skip straight to a conversation.</p>
+        <p>Building a human-data or AI-native service line and need someone to run it. Hiring a head of GTM or revenue. Or you want to talk through how the operating layer would look inside your business. Start with the resume, or skip straight to a conversation.</p>
         <div class="footer-links">
           <a href="assets/pdf/patrick-severs-resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">Resume (PDF)</a>
-          <a href="https://calendar.app.google/DJfJDwJz4SbvFGMg6" class="btn btn-secondary" target="_blank" rel="noopener">Book time</a>
+          <a href="https://calendly.com/pvsevers/30min" class="btn btn-secondary" target="_blank" rel="noopener">Book 30 min</a>
           <a href="mailto:pvsevers@gmail.com" class="btn btn-secondary">pvsevers@gmail.com</a>
           <a href="https://www.linkedin.com/in/pvsevers/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/psevers" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>

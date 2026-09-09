@@ -221,6 +221,8 @@ em { font-style: italic; }
 .hero-cta-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
 .hero-cta-row .quiet { font-size: var(--text-sm); color: var(--ink-faint); }
 .hero-cta-row .quiet a { color: var(--ink-soft); }
+.mid-cta { margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px dashed var(--line-strong); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.mid-cta p { font-family: var(--font-hand); font-size: var(--text-lg); color: var(--ink-soft); }
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero h1 { max-width: none; }

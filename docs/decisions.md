@@ -5,7 +5,7 @@
 - **Positioning:** hero leads with the hybrid claim itself ("GTM leader who operates like a technical founder"), not GTM-first or builder-first.
 - **Design:** terminal/markdown-native aesthetic — monospace accents (JetBrains Mono), IBM Plex Sans body, custom workflow/pipeline diagrams, technical-green accent. Light mode primary, dark mode toggle (persisted via localStorage).
 - **No longer employed at G2i** — fully public, search-indexed, no visibility gating needed. Standard confidentiality obligations to a former employer still apply.
-- **Contact:** email (pvsevers@gmail.com) + LinkedIn (linkedin.com/in/pvsevers) + Google Calendar booking link (https://calendar.app.google/DJfJDwJz4SbvFGMg6) for "book time."
+- **Contact:** email (pvsevers@gmail.com) + LinkedIn (linkedin.com/in/pvsevers) + booking link for "book time" (Google Calendar at v1; Calendly since 2026-09-08, see below).
 - **Domain:** patricksevers.com — registered via Cloudflare (2026-07-17). **Hosting:** Cloudflare Pages (same account). **Analytics:** Cloudflare Web Analytics (privacy-friendly, no cookie banner).
 - **Downloadable PDF resume** alongside the site (one-page, ATS-friendly).
 - **Personal content:** softball-recruiting-tool story stays in, kept specific (not anonymized) — Patrick's explicit call.
@@ -26,3 +26,8 @@
 - **Cut:** Founding Strategic AE. Consulting is shown as current work, not offered as a service. *The AI-Driven Leader* (Woods) gets one line of credit inside the rules, not a page.
 - **Design:** "working whiteboard". Editorial/executive type (Fraunces, Source Sans 3), Caveat for whiteboard annotations only, IBM Plex Mono for receipts. Blue marker accent replaces technical green. Paper ground with faint grid. Dark mode kept as a dark whiteboard.
 - **Pending Patrick / founder OK before deploy:** Agent Company pilot count and the "no decision on what to sell" framing; whether to link their site.
+
+## 2026-09-08: copy pass and objections block
+- Booking link is now https://calendly.com/pvsevers/30min; button copy "Book 30 min" on every page (30 minutes stated as a risk reducer).
+- Home page gains a mid-page CTA after the three receipts and an objections section (four objections, each linked to its receipt page) between testimonials and contact. Adapted from a 14-section sales-page framework; the salesy sections (consequences, urgency, false solutions) were rejected as off-brand.
+- Word-level deslop across all six pages: intensifier "real", "on purpose/deliberate", "stood up", "AI leverage" cut or varied. Hero headline, figures, and open rulings untouched.
