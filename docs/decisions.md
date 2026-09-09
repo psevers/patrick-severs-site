@@ -127,3 +127,8 @@
 
 ## 2026-09-09 21:23 UTC: Previous Work hero uses the reversed fork
 - Patrick selected the fork illustration for the Previous Work hero, horizontally reversed, replacing the reused round-table loop. The reversal is scoped to this placement; the source asset remains unchanged.
+
+
+## 2026-09-09 21:57 UTC: visible visitor theme toggle
+- Patrick requested an optional light/dark toggle for visitors. It is visible in the shared navigation on desktop and mobile, labels the destination mode, and saves each visitor’s selection. System preference applies until they choose.
+- Verified both directions, keyboard activation, reload persistence, and mobile fit across six pages. Fresh standards and spec reviews found no blockers.

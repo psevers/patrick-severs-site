@@ -2,19 +2,30 @@
   var root = document.documentElement;
   var stored = null;
   try { stored = localStorage.getItem('theme'); } catch (e) { stored = null; }
-  if (stored) root.setAttribute('data-theme', stored);
-
-  document.querySelectorAll('[data-theme-toggle]').forEach(function (toggle) {
+  if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
+  var systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  var themeToggles = document.querySelectorAll('[data-theme-toggle]');
+  function isDarkTheme() {
+    var current = root.getAttribute('data-theme');
+    return current ? current === 'dark' : systemTheme.matches;
+  }
+  function updateThemeLabels() {
+    var label = isDarkTheme() ? 'Light mode' : 'Dark mode';
+    themeToggles.forEach(function (toggle) {
+      toggle.textContent = label;
+      toggle.setAttribute('aria-label', 'Switch to ' + label.toLowerCase());
+    });
+  }
+  themeToggles.forEach(function (toggle) {
     toggle.addEventListener('click', function () {
-      var current = root.getAttribute('data-theme');
-      var isDark = current
-        ? current === 'dark'
-        : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var next = isDark ? 'light' : 'dark';
+      var next = isDarkTheme() ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
+      updateThemeLabels();
       try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked; theme still applies for this page */ }
     });
   });
+  updateThemeLabels();
+  systemTheme.addEventListener('change', updateThemeLabels);
 
   var navToggle = document.querySelector('[data-nav-toggle]');
   var navLinks = document.querySelector('[data-nav-links]');
