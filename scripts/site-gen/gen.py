@@ -1,4 +1,4 @@
-import re, sys, pathlib
+import hashlib, re, sys, pathlib
 S = pathlib.Path(__file__).parent
 OUT = pathlib.Path(__file__).resolve().parents[2]/"src"
 
@@ -127,5 +127,10 @@ def animate_plates(body):
 
 for fn, (title, desc, _) in PAGES.items():
     body = animate_plates((S/"pages"/fn).read_text())
-    (OUT/fn).write_text(head(fn, title, desc) + nav(fn) + body + FOOTER)
+    page = head(fn, title, desc) + nav(fn) + body + FOOTER
+    # Refresh cached styles and behavior whenever their contents change.
+    for asset in ("assets/css/style.css", "assets/js/main.js", "assets/js/riso.js"):
+        version = hashlib.sha256((OUT/asset).read_bytes()).hexdigest()[:12]
+        page = page.replace(f'"{asset}"', f'"{asset}?v={version}"')
+    (OUT/fn).write_text(page)
     print("wrote", fn)
