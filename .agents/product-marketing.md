@@ -1,13 +1,13 @@
 # Product Marketing Context
 
-**Document version:** v3
-**Last updated:** 2026-07-18
+**Document version:** v4
+**Last updated:** 2026-09-09 21:00 UTC
 
 > Note: this isn't a B2B SaaS product — it's Patrick Severs' personal portfolio/job-search site (patricksevers.com), replacing a traditional resume. Sections below are adapted accordingly: "customer" = a hiring leader evaluating Patrick as a candidate, "competitors" = other candidates for the same class of role, "conversion action" = book time / consider him for a role.
 
 ## Product Overview
 **One-liner:** A GTM leader who is also an AI operator — proven revenue leadership plus a real, governed, production AI agent fleet he runs himself.
-**What it does:** Replaces a traditional resume with a full portfolio site: home page covering three pillars (GTM Leadership, Agentic Systems, Products Built), each linking to a deep-dive page, plus a compact career timeline and a downloadable ATS-friendly PDF resume.
+**What it does:** Replaces a traditional resume with a portfolio organized around Home, Previous Performance, How I Operate, Human Data, current work, and Career. Home leads with GTM leadership and point of view. Human Data is a dedicated specialization page. The PDF resume remains downloadable.
 **Product category:** Executive/GTM-leadership candidate positioning site, for AI-native companies specifically.
 **Product type:** Personal portfolio site (static, no build step), not a company or SaaS product.
 **Business model:** N/A — the "conversion" is a hiring conversation, not a purchase.
@@ -49,7 +49,7 @@
 - Real revenue outcomes with real numbers (122% YoY growth, 2.7× a quarter vs. a prior year, 21.7× EBITDA growth, 4 business lines built from 1)
 - A real, production, cost-governed, security-reviewed multi-agent fleet he directs, not codes himself — he diagnoses problems and gives direction, his agents (Emma, principal engineer agent) write and ship the code — not a claim, a public repo (severs-agent-shared) and named specific fixes back it up
 - Recent (last 3 years), not dated — the AI-native chapter is his most current and most relevant experience
-**How we do it differently:** Most candidates pick one lane (GTM or technical). This site's entire structure (three pillars, each with a deep-dive) is built to prove both are real and connected — the agent fleet is what made him efficient as a GTM operator, not a side hobby.
+**How we do it differently:** Show revenue outcomes, team leadership, and AI operating practice together. The homepage explains Patrick's point of view; the performance record and operating page provide evidence. Human Data is one application of that experience.
 **Why that's better:** A hiring leader gets verifiable proof instead of a claim, on both halves of the hybrid pitch.
 **Why customers choose us:** Specificity everywhere — named numbers, named people (with real testimonials), a real public repo, real named enterprise clients — instead of generic "results-driven leader" language.
 
@@ -103,6 +103,7 @@
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v4 (2026-09-09 21:00 UTC) — Patrick broadened the site from Human Data-first positioning to GTM leadership, leadership judgment, and point of view. Six-page structure separates previous performance, current work, expertise, and career. Historical audience/persona notes below remain background; this ruling governs the current page structure.
 - v3 (2026-07-18) — Major correction: Patrick does not write or debug code himself, anywhere, including the "Products I've Built" projects. His agents (principally Emma, his principal engineer agent) write and ship all code; his actual skill is diagnosing problems, giving clear direction, and holding the quality bar. Removed the "writes and debugs code himself" claim from Jobs to Be Done and Differentiation.
 - v2 (2026-07-18) — Sharpened the one-liner to Patrick's own phrasing ("a GTM leader who is also an AI operator"); corrected the conversion-action hierarchy — resume is the low-friction primary ask, "Book time" is a high-value secondary CTA, not co-equal with resume/LinkedIn.
 - v1 (2026-07-18) — Initial context, auto-drafted from the site's CLAUDE.md decisions log, current copy, and this session's hero/positioning conversation with Patrick.

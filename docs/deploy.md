@@ -14,5 +14,11 @@
 - Founder OK on the Agent Company page (pilot count, "no decision on what to sell", link to their site).
 - Regenerate the resume PDF: `scripts/build_resume.py` still carries the pre-redesign headline and summary.
 - Redraw `og-image.png` in the whiteboard language (still the terminal-green image).
-- `.agents/product-marketing.md` (v3) describes the old three-pillar site; needs a v4.
+- Product-marketing context updated to v4 with the six-page structure.
 - Mobile-viewport spot check on a real phone (still open from v1).
+
+## Release checks, 2026-09-09 21:27 UTC
+- Standards review: unsafe loop-checker path handling, portrait graphics fallback, and footer nesting fixed; fresh reviewer confirmed all three fixes.
+- Spec review: latest positioning, six thought-partner rules, typography, project groups, diagrams, and reversed-fork hero implemented. No blockers.
+- Browser checks: desktop visuals and all six pages at 390px width. Source checks: generated pages current, local links/assets/fragments resolve, JS and Python syntax pass, candidate-file secret-pattern scan clear. Targeted tests cover rejected loop-check paths and portrait link-failure/context-loss fallback.
+- No separate approved design packet or formal experience gate exists. Visual checks followed the current user rulings in `docs/decisions.md`.

@@ -1,3 +1,8 @@
 .wrangler/
 .claude/worktrees/
 .DS_Store
+
+# local secrets, never committed
+.env
+.env.*
+.loops/
