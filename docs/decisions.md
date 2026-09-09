@@ -37,3 +37,5 @@
 - Objections lede ("I've lost a final round on one of these") stays. Objection 1's "hired into each" (incl. finance) confirmed accurate.
 - **Agent Company storyline is on hold.** Patrick is not convinced by the case-study framing as written. Needs its own grill session before the page, the home receipt, and objection 3 are treated as final. Founder OK items (pilot count, link, "no decision on what to sell") remain open under this.
 - `scripts/site-gen/` is committed; `AGENTS.md` now says edit the generator, never `src/`.
+- Career page, Braintrust: "on intentionally thin margins" (Patrick: the thin margins were the point, not a hazard).
+- How I operate keeps six rules; spec updated from five. "Priced to learn" deferred into the Agent Company hold.

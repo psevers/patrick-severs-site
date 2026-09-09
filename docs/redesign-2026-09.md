@@ -12,7 +12,7 @@
 ## New content (Patrick's rulings)
 - **Human Data Operating Layer** page: the GLG blueprint, genericized. No GLG name, no interviewer names or quotes, no "2M experts", the $10M/$50M/$100M rows abstracted to "market-norm ~30% gross margin". Six sections, same structure as the deck.
 - **The Agent Company** case study: named, linked, 45 days in. Day one: no CRM, no lead source, stitched outreach tooling, no decision on what to sell. Shipped: CRM stood up agentically, local-first lead motion, agent-run outbound (10-15 campaigns/day), demos and solution landing pages. Result: 5 demos, 4 pilots; local/in-person beat email on response rate. *Needs founder OK before publish:* the pilot count and the "no direction on product" framing. Pricing framed as "priced for pilots to learn fast" *(judgment)*.
-- **How I operate** section (5 rules, each with a receipt): direct don't do; interview before you task (credit: Geoff Woods, *The AI-Driven Leader*, CRIT); cost is policy; a human approves every send; presence beats outbound. The book gets one line of credit, not a page.
+- **How I operate** section (6 rules, each with a receipt; Patrick confirmed six on 2026-09-09): direct don't do; interview before you task (credit: Geoff Woods, *The AI-Driven Leader*, CRIT); cost is policy; a human approves every send; presence beats outbound; catch what fails quietly. The book gets one line of credit, not a page.
 
 ## Structure
 - Home: hero → POV → three proofs (G2i record, Operating Layer blueprint, Agent Company) → How I operate → testimonials → contact.
