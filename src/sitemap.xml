@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://patricksevers.com/</loc>
-  </url>
-  <url>
-    <loc>https://patricksevers.com/gtm-leadership.html</loc>
-  </url>
-  <url>
-    <loc>https://patricksevers.com/agentic-systems.html</loc>
-  </url>
-  <url>
-    <loc>https://patricksevers.com/products.html</loc>
-  </url>
-  <url>
-    <loc>https://patricksevers.com/career.html</loc>
-  </url>
+  <url><loc>https://patricksevers.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://patricksevers.com/gtm-leadership.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://patricksevers.com/human-data-operating-layer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://patricksevers.com/agent-company.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patricksevers.com/how-i-operate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patricksevers.com/career.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

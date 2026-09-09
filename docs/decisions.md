@@ -16,3 +16,13 @@
 - Career history (companies/titles/dates back to 1999): `~/Downloads/Profile.pdf` (LinkedIn export).
 - Headshot: `src/assets/images/headshot.png`.
 - Redaction-sensitive source: `patrick-gtm-record/patrick-severs-gtm-record.html` — see the confidentiality rail in `AGENTS.md`.
+
+## Redesign, 2026-09-08 UTC (interview session; full spec in `docs/redesign-2026-09.md`)
+
+- **Primary bet:** Head of GTM / VP Revenue. **Wedge:** Human Data. The site argues the builder/GM claim explicitly (the GLG-style final-round loss was a GM-breadth objection, not a GTM one).
+- **Hero:** "I build the AI training-data business inside your company, walk it into the frontier labs, and build the team that delivers."
+- **Point of view:** presence and proof win the deal; agents do the operating work so a small team can afford to be present.
+- **New pages:** `human-data-operating-layer.html` (Patrick's own final-round blueprint, genericized: no company, no interviewer names, no network size, their economics abstracted) and `agent-company.html` (named, live, dated case study). `how-i-operate.html` absorbs the old Agentic Systems and Products pages; those two files are now meta-refresh redirects.
+- **Cut:** Founding Strategic AE. Consulting is shown as current work, not offered as a service. *The AI-Driven Leader* (Woods) gets one line of credit inside the rules, not a page.
+- **Design:** "working whiteboard". Editorial/executive type (Fraunces, Source Sans 3), Caveat for whiteboard annotations only, IBM Plex Mono for receipts. Blue marker accent replaces technical green. Paper ground with faint grid. Dark mode kept as a dark whiteboard.
+- **Pending Patrick / founder OK before deploy:** Agent Company pilot count and the "no decision on what to sell" framing; whether to link their site.

@@ -9,3 +9,10 @@
 ## Open items (as of 2026-07-17)
 - Full career-progression color/context from Patrick (companies/dates sourced from his LinkedIn PDF export; the "why" behind each era still needs his input).
 - Mobile-viewport spot check on a real phone.
+
+## Open items (redesign, 2026-09-08 UTC)
+- Founder OK on the Agent Company page (pilot count, "no decision on what to sell", link to their site).
+- Regenerate the resume PDF: `scripts/build_resume.py` still carries the pre-redesign headline and summary.
+- Redraw `og-image.png` in the whiteboard language (still the terminal-green image).
+- `.agents/product-marketing.md` (v3) describes the old three-pillar site; needs a v4.
+- Mobile-viewport spot check on a real phone (still open from v1).
