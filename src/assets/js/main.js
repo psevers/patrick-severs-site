@@ -160,4 +160,15 @@
       heads.forEach(function (h) { h.style.visibility = ''; });
     }
   }
+
+  // Vercel 307s to /#now and /gtm-leadership.html#human-data can land
+  // with the hash set before layout; jump once the page is ready.
+  function scrollToHash() {
+    var id = (location.hash || '').replace(/^#/, '');
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView();
+  }
+  if (document.readyState === 'complete') scrollToHash();
+  else window.addEventListener('load', scrollToHash);
 })();

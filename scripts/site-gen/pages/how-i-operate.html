@@ -4,7 +4,7 @@
       <div class="main">
         <div class="eyebrow">How I operate &middot; leadership and AI</div>
         <h1>Set direction. Hold the bar.</h1>
-        <p class="lede">How I lead people, put agents to work, and keep responsibility clear. The rules, the fleet, and the work built under my direction.</p>
+        <p class="lede">How I lead people, put agents to work, and keep responsibility clear.</p>
       </div>
     </div>
   </div>
@@ -13,15 +13,20 @@
 <section id="rules" class="numbered-head">
   <div class="container">
     <div class="row"><h2 class="main rh">The rules</h2><p class="main deck">AI helps me think better, then do more.</p></div>
-    <div class="rules">
-      <div class="rule"><h3>Start with the right question.</h3><p>Before asking AI for an answer, get clear on the decision. What am I trying to achieve? What is getting in the way? What would a useful answer help me do?</p><p class="fn receipt">Example prompt: “Help me identify the question I need to answer before I make this decision.”</p></div>
-      <div class="rule"><h3>Give it the context.</h3><p>Explain the situation, the people involved, the outcome, and the constraints. Give the AI a role that fits the problem. Better context gives it something useful to think with.</p><p class="fn receipt">Example prompt: “Here is the situation and what I’m trying to achieve. Act as a thought partner with experience in this kind of decision.”</p></div>
-      <div class="rule"><h3>Ask it to interview me.</h3><p>Context, role, interview, then task. Have the AI ask questions one at a time before it recommends a path. The interview exposes what I have left out and helps me clarify my own thinking.</p><p class="fn receipt">This site's redesign started with a ten-question interview. Two of my assumptions didn't survive it.</p></div>
-      <div class="rule"><h3>Challenge my thinking.</h3><p>I use AI as a thought partner. Ask it to test the assumptions, find the weak argument, and make the case for another approach. Its value includes helping me see what I missed.</p><p class="fn receipt">Example prompt: “What am I assuming? Where is my reasoning weak? What would change your recommendation?”</p></div>
-      <div class="rule"><h3>Turn insight into action.</h3><p>Once the direction is clear, give AI a specific task and define what good looks like. It can draft, analyze, and build. I review the work against the outcome and direct the next revision.</p><p class="fn receipt">I sent an early goals dashboard back for a rebuild because the clean screen hid broken states. Looking finished was not the standard.</p></div>
-      <div class="rule"><h3>Own the decision.</h3><p>AI expands what I can consider and accomplish. I still bring the judgment, make the call, and take responsibility for the result. Agents draft; people decide what leaves the building.</p><p class="fn receipt">Every send from the agent fleet waits for a person to approve it.</p></div>
+    <div class="rules compact">
+      <div class="rule"><h3>Start with the right question.</h3><p>Get clear on the decision before asking AI for an answer.</p></div>
+      <div class="rule"><h3>Give it the context.</h3><p>Situation, people, outcome, constraints — and a role that fits the problem.</p></div>
+      <div class="rule"><h3>Ask it to interview me.</h3><p>Questions one at a time, before a recommendation. The interview shows what I left out.</p></div>
+      <div class="rule"><h3>Challenge my thinking.</h3><p>Test the assumption, find the weak argument, make the case for another path.</p></div>
+      <div class="rule"><h3>Turn insight into action.</h3><p>A specific task, a definition of good, then I review against the outcome.</p></div>
+      <div class="rule"><h3>Own the decision.</h3><p>Agents draft. People decide what leaves the building.</p></div>
     </div>
-    <div class="row"><p class="main fn">Influenced by Geoff Woods’ <em>The AI-Driven Leader</em>. These are the practices I use to think with AI and put the thinking to work.</p></div>
+    <div class="row"><p class="main fn">Influenced by Geoff Woods’ <em>The AI-Driven Leader</em>.</p></div>
+    <figure class="loop" aria-labelledby="operating-loop-title" aria-describedby="operating-loop-desc">
+      <p class="board-tab" id="operating-loop-title">One operator, one loop</p>
+      <p class="visually-hidden" id="operating-loop-desc">A four-stage operating circuit. Diagnose the constraint, architect the system, automate the repeatable work, then compound the result into the next cycle. Human judgment stays on the decision. Repeatable work moves around the loop.</p>
+      <!--loop:operating-loop-->
+    </figure>
   </div>
 </section>
 
@@ -31,96 +36,68 @@
     <div class="row">
       <div class="main">
         <p class="deck">Seven agents run the operating work of my job.</p>
-        <p>Reporting and pipeline analysis, chief-of-staff duties, marketing and social-selling drafts, and the internal tooling I run from: wikis, dashboards, the revenue brain. Each agent is its own cloud service with its own tests, migrated into a monorepo with a documented rollback plan and a health-gated cutover.</p>
-        <p><strong>The loop.</strong> Strategy sets the targets, the forecast, and the focus. The fleet does the work: reporting and pipeline, chief of staff, marketing and social drafts, wikis, dashboards, the brain. Every send waits at a human gate. Outcomes feed the next strategy call.</p>
-        <p><strong>The flagship</strong> is the Rocks dashboard. I run my quarterly goals off it and twice a week it drafts the leadership standup. Spec before code, relational SQL chosen over key-value with the reasoning written down, and a Box-note sync and a spreadsheet removed so there's one source of truth.</p>
-        <p><strong>What's public.</strong> The shared memory engine every agent builds on is open source: full git history, 75 tests, and it never touched business data. <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>. The rest of the fleet stays private.</p>
+        <p>Reporting and pipeline, chief-of-staff duties, marketing drafts, wikis, dashboards, the revenue brain. Each agent is its own service with its own tests. Every send waits at a human gate.</p>
+        <p><strong>The flagship</strong> is the Rocks dashboard. Quarterly goals, and twice a week it drafts the leadership standup. One source of truth — a Box-note sync and a spreadsheet came out.</p>
+        <p><strong>What's public.</strong> The shared memory engine is open source: full git history, 75 tests, never touched business data. <a href="https://github.com/psevers/severs-agent-shared" target="_blank" rel="noopener">severs-agent-shared on GitHub</a>.</p>
       </div>
     </div>
+    <figure class="loop" aria-labelledby="revenue-brain-title" aria-describedby="revenue-brain-desc">
+      <p class="board-tab" id="revenue-brain-title">Revenue Brain</p>
+      <p class="visually-hidden" id="revenue-brain-desc">Business signals from CRM, calls, email, Slack or Teams, documents, social, and product telemetry enter the Revenue Brain. Synthesis, extraction, and matching happen in the hub. Human review gates and an oversight layer sit on the work. Outputs are pipeline, content, and reporting.</p>
+      <!--loop:revenue-brain-->
+    </figure>
   </div>
-  <div class="container"><figure class="board restored-board"><div class="diagram-scroll" tabindex="0" role="region" aria-label="Agent fleet diagram"><svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strategy directs the seven-agent fleet. Every send passes human approval. Outcomes feed the next strategy call.">
-          <g filter="url(#wb-rough)">
-            <rect x="20" y="100" width="180" height="100" rx="6" class="wb-box accent"/>
-            <text x="110" y="136" text-anchor="middle" class="wb-label">Strategy</text>
-            <text x="110" y="158" text-anchor="middle" class="wb-sub">targets and forecast</text>
-            <text x="110" y="176" text-anchor="middle" class="wb-sub">priorities and focus</text>
-            <path d="M200 150 H 258" class="wb-line wb-arrow"/>
-            <rect x="260" y="20" width="280" height="230" rx="8" class="wb-box"/>
-            <text x="400" y="52" text-anchor="middle" class="wb-title">7-agent fleet</text>
-            <line x1="280" y1="68" x2="520" y2="68" class="wb-line faint"/>
-            <text x="400" y="96" text-anchor="middle" class="wb-sub">reporting + pipeline</text>
-            <text x="400" y="120" text-anchor="middle" class="wb-sub">chief of staff</text>
-            <text x="400" y="144" text-anchor="middle" class="wb-sub">marketing + social drafts</text>
-            <text x="400" y="168" text-anchor="middle" class="wb-sub">wikis, dashboards, brain</text>
-            <text x="400" y="192" text-anchor="middle" class="wb-sub">cost limits + security reviews</text>
-            <text x="400" y="226" text-anchor="middle" class="wb-mono">each service tested</text>
-            <path d="M540 150 H 603" class="wb-line wb-arrow"/>
-            <path d="M605 150 L650 105 L695 150 L650 195 Z" class="wb-box accent"/>
-            <text x="650" y="146" text-anchor="middle" class="wb-mono">human</text>
-            <text x="650" y="164" text-anchor="middle" class="wb-sub">approval</text>
-            <text x="650" y="76" text-anchor="middle" class="wb-note red">every send waits</text>
-            <path d="M695 150 H 758" class="wb-line accent wb-arrow"/>
-            <rect x="760" y="100" width="120" height="100" rx="6" class="wb-box accent"/>
-            <text x="820" y="142" text-anchor="middle" class="wb-label">Sent</text>
-            <text x="820" y="164" text-anchor="middle" class="wb-sub">or shipped</text>
-            <path d="M820 200 V 290 H 110 V 202" class="wb-line accent dashed wb-arrow"/>
-            <path d="M820 200 V 290 H 110 V 202" class="wb-pulse" pathLength="100"/>
-            <text x="450" y="320" text-anchor="middle" class="wb-note">outcomes feed the next strategy call</text>
-          </g>
-        </svg></div></figure></div>
 </section>
 
 <section id="built" class="numbered-head">
   <div class="container">
-    <div class="row"><h2 class="main rh">Business and personal projects</h2></div>
+    <div class="row"><h2 class="main rh">Built under direction</h2></div>
     <div class="row">
       <div class="main">
-        <p class="deck">Useful at work. Useful at home.</p>
-        <p>I define the problem and direct the build; agents write the code. The business work serves teams and clients. The personal work serves my family, my interests, and my own learning.</p>
+        <p class="deck">I define the problem. Agents write the code.</p>
       </div>
     </div>
-    <h3 class="project-group" id="business-projects">For the business</h3>
-    <div class="rules">
-      <div class="rule"><h3>GTM knowledge base</h3><p>The structured knowledge base G2i's GTM team ran on. Scattered tribal knowledge turned into something searchable and durable. Adopted by the team.</p><p class="fn receipt">For the business. Adopted team-wide.</p></div>
-      <div class="rule"><h3>Internal cost-saving tool</h3><p>Replaced a paid third-party service the team relied on, keeping the workflow the team already knew and cutting a recurring annual cost.</p><p class="fn receipt">For the business. About $1,800 a year saved.</p></div>
-      <div class="rule"><h3>The Agent Company's CRM</h3><p>A CRM set up in the first week of the engagement. Agents did the wiring and the migration off several stitched-together tools, so the team had one system of record before the first demo.</p><p class="fn receipt">For a client. See the <a href="agent-company.html">working notes</a>.</p></div>
+    <div class="rules compact">
+      <div class="rule"><h3>GTM knowledge base</h3><p>Scattered tribal knowledge turned into something the G2i GTM team actually ran on.</p></div>
+      <div class="rule"><h3>Internal cost-saving tool</h3><p>Replaced a paid third-party service. About $1,800 a year, same workflow the team already knew.</p></div>
+      <div class="rule"><h3>The Agent Company's CRM</h3><p>Set up in week one. Agents did the wiring so the team had one system of record before the first demo.</p></div>
     </div>
-    <h3 class="project-group" id="personal-projects">Personal and family</h3>
-    <div class="rules">
-      <div class="rule"><h3>Recruiting OS for a softball athlete</h3><p>A privacy-first recruiting operating system: a private, AI-assisted command center for the family plus an unlisted athlete profile for coaches. Prospects, performance data, outreach, in one place instead of spreadsheets and text threads.</p><p class="fn receipt">For my daughter. Next.js, Supabase, strict privacy rails.</p></div>
-      <div class="rule"><h3>Fastpitch scorekeeping app</h3><p>A local-first iOS scorekeeping app for one team, built in six increments, the last of them crash recovery. Because the scorebook should survive a dropped phone.</p><p class="fn receipt">For her team. Swift 6, SwiftUI. <a href="https://github.com/psevers/softball-scoring" target="_blank" rel="noopener">Public repo</a>.</p></div>
-      <div class="rule"><h3>The Forge: how models get post-trained</h3><p>A single-page explainer on post-training, written to make the seven techniques legible to a business leader. The kind of thing I'd hand a sales team before they sit with a research lab.</p><p class="fn receipt">Personal learning. One page, one metaphor.</p></div>
-      <div class="rule"><h3>Save-format reverse-engineering tool</h3><p>Directed the byte-by-byte reverse engineering of a closed, undocumented game save format to build a companion tool the game doesn't offer. No spec, no docs, just the file.</p><p class="fn receipt">Personal. Parsing, editing, re-serializing.</p></div>
-    </div>
+    <p class="fn" id="personal-projects" style="margin-top: var(--space-8); max-width: 58ch;">Personal work, same method: a recruiting OS for a softball athlete, a local-first scorekeeping app, a post-training explainer for business leaders, and a companion tool reverse-engineered from a closed save format.</p>
   </div>
 </section>
 
 <section class="inset tight" id="stack">
   <div class="container">
-    <div class="split" style="align-items:start;">
+    <div class="split">
       <div class="prose">
         <div class="eyebrow" style="margin-bottom: var(--space-2);">For the technically curious</div>
         <h3>The stack, and one trust boundary.</h3>
-        <p>Turborepo and Bun workspaces, TypeScript on the native compiler, and Effect Schema enforced at every trust boundary: model output, external APIs, HTTP bodies, and the shared memory engine's write path. Correctness-only lint blocks CI. A supply-chain rule sets a seven-day minimum publish age on new dependencies so a same-day-published package can't be pulled in by accident.</p>
+        <p>Turborepo and Bun workspaces, TypeScript on the native compiler, and Effect Schema enforced at every trust boundary: model output, external APIs, HTTP bodies, and the shared memory engine's write path. Correctness-only lint blocks CI. A supply-chain rule sets a seven-day minimum publish age on new dependencies.</p>
         <p>The snippet is the shape of every model call in the fleet: the reply is decoded against a schema before anything downstream can touch it, and a bad reply throws instead of silently propagating malformed data.</p>
       </div>
-      <div class="receipt-block"><span class="c">// llm.ts, fleet-shared. Parse + validate a strict-JSON model reply.</span>
-<span class="c">// Throws on failure. Diagnostics go to the server log, never the response.</span>
+      <figure class="terminal">
+        <div class="terminal-bar" aria-hidden="true"><span class="terminal-dots"></span><span class="terminal-title">llm.ts</span></div>
+        <pre class="receipt-block"><span class="c">// Parse + validate a strict-JSON model reply.</span>
+<span class="c">// Throws on failure. Logs stay on the server.</span>
 <span class="k">export function</span> decodeLlmJson&lt;A, I&gt;(
-  schema: Schema.Schema&lt;A, I, never&gt;, raw: <span class="k">string</span>, label: <span class="k">string</span>
+  schema: Schema.Schema&lt;A, I, never&gt;,
+  raw: <span class="k">string</span>,
+  label: <span class="k">string</span>
 ): A {
   <span class="k">const</span> candidate = extractJsonCandidate(raw);
-  <span class="k">if</span> (candidate === <span class="k">null</span>) <span class="k">throw new</span> Error(`${label}: no JSON object found`);
+  <span class="k">if</span> (candidate === <span class="k">null</span>) {
+    <span class="k">throw new</span> Error(`${label}: no JSON object found`);
+  }
   <span class="k">const</span> result = Schema.decodeUnknownEither(
     Schema.parseJson(schema), { errors: <span class="k">'all'</span> }
   )(candidate);
   <span class="k">if</span> (Either.isLeft(result)) {
-    console.warn(`[llm decode] ${label}: ${formatError(result.left)}`);
-    <span class="k">throw new</span> Error(`${label}: reply failed schema validation`);
+    console.warn(`[llm decode] ${label}`);
+    <span class="k">throw new</span> Error(`${label}: schema failed`);
   }
   <span class="k">return</span> result.right;
-}</div>
+}</pre>
+      </figure>
     </div>
   </div>
 </section>
-

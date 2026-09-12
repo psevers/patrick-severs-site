@@ -132,3 +132,32 @@
 ## 2026-09-09 21:57 UTC: visible visitor theme toggle
 - Patrick requested an optional light/dark toggle for visitors. It is visible in the shared navigation on desktop and mobile, labels the destination mode, and saves each visitor’s selection. System preference applies until they choose.
 - Verified both directions, keyboard activation, reload persistence, and mobile fit across six pages. Fresh standards and spec reviews found no blockers.
+
+## 2026-09-11: three native motion loops
+- First pass rebuilt the three approved concept loops as inline SVG plus HTML controls.
+
+## 2026-09-11: designed loop videos
+- Patrick chose the designed Flova videos over the native SVG rebuild. Revenue Brain and One Operator, One Loop on How I operate; 25-Year Arc on Career.
+- Encoded muted mp4/webm with JPEG posters. Reduced motion swaps to the still. Loops pause off-screen and in hidden tabs. No invert in dark mode: the drawings have baked-in type.
+- Loop cream multiplies through to the page paper so the 32px gridboard shows in the drawings. Career crop drops the wooden desk so that blend stays even. Dark mode keeps the cream and prints the light-mode hairline grid on top.
+
+## 2026-09-11: How I operate annotations
+- Removed the fleet whiteboard under Revenue Brain and the operating-loop caption. Dropped the Agent Company CRM receipt and all four personal-project receipts. Stack snippet sits in a terminal window, vertically centered with the copy. Tightened page-hero and loop spacing.
+
+## 2026-09-11: home annotations
+- Removed the round-table plate beside the home essay. Tightened hero-to-body and section padding. Compacted the numbers ledger to a four-up strip. Dropped the evidence caption, the operate rail, and the objections section. POV copy now says "in my previous work" and "in a single quarter." Geoff Woods' *The AI-Driven Leader* is credited under How I lead and operate.
+
+## 2026-09-11: employer-ready visual site
+- Bet: Head of GTM / VP Revenue. Spine: Grew it → Led the team → Installed the system. Nav is Home, Previous work, How I operate, Career. Human Data and Now drop from the nav; `human-data-operating-layer.html` redirects to Previous work `#human-data`, `agent-company.html` to `/#now`.
+- Home keeps the handwritten headline, orange revenue underline, and riso portrait. First scroll is three Flova boards with a two-sentence caption and one number each. Thea quote stays. `#now` is one line (Agent Company day 45; open to Head of GTM / VP Revenue). Essay, evidence table, numbers ledger, explore plates, and the six rules come off Home.
+- Previous work is type-only hero plus four G2i stats, then five short chapters (Grew, Led, Events, Human Data, Operating discipline). Fork plate, SVG whiteboards, the read essay, and Before-G2i cards come off. Yousra/Kyle stay. Confidentiality note stays under the stats.
+
+## 2026-09-12: Previous work stops repeating Home
+- Patrick: Home and Previous work felt like the same page. Grew and Led boards, and even the headlines, were reused by design as teaser then record. How I operate and Career already felt distinct.
+- Home keeps the three-board spine (Grew, Led, Installed). Previous work drops those two boards. It now opens on Events, then Human Data, then operating-discipline receipts and Yousra/Kyle. Fourth stat on that page is 59% of Q2 leads from presence, not a second "four lines" number.
+- Home "Led" link goes to `#people`. `#human-data` redirect stays.
+- How I operate: six rules compacted to title plus one line; both existing loops stay; three business receipts; personal/family collapsed to one sentence; stack/terminal stays.
+- Career: revised 25-year arc (no duplicate Braintrust, no teal Box halo, Agent Company as the now node, GTM-relevant labels). Now-era states the Head of GTM ask instead of linking the retired Agent Company page.
+- Visual system is the 32px gridboard plus cream-multiply Flova drawings. Remaining riso plates (fork, building, boat, shop doors) and the inline SVG whiteboards they stood in for are out of the layout. Revenue Brain and One Operator stay on How I operate.
+- Preview deploys to Vercel (`patrick-severs-site.vercel.app`). `patricksevers.com` stays on Cloudflare Pages until an explicit ship. Resume PDF headline and `og-image.png` are out of this pass.
+

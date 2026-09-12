@@ -4,13 +4,9 @@ OUT = pathlib.Path(__file__).resolve().parents[2]/"src"
 
 PAGES = {
   "index.html": ("Patrick Severs: GTM Leadership, Teams and AI Operations",
-     "I turn strategy into revenue. Go-to-market leadership, team building, and AI operations, with the performance record and working notes to back it up.", "Home"),
+     "I turn strategy into revenue. Go-to-market leadership, team building, and AI operations, with the performance record to back it up.", "Home"),
   "gtm-leadership.html": ("Previous Performance: Patrick Severs",
-     "Revenue growth, new business lines, and cross-functional leadership. The G2i record, plus earlier work in enterprise sales, renewals, and account expansion.", "Previous performance"),
-  "human-data-operating-layer.html": ("Human Data: Patrick Severs",
-     "A working blueprint for building a human-data business: the team, go-to-market motion, delivery, quality, and economics, with whiteboard diagrams.", "Human Data"),
-  "agent-company.html": ("What I'm Working On Now: Patrick Severs",
-     "Building go-to-market at The Agent Company. Working notes from day 45: the product decision, the operating work, and the first paid pilots.", "Now"),
+     "Revenue growth, new business lines, and cross-functional leadership. The G2i record: 122% growth, four lines from one, and the team behind it.", "Previous performance"),
   "how-i-operate.html": ("How I Operate: Patrick Severs",
      "How I lead people, put agents to work, and keep responsibility clear. Six operating rules, the agent fleet, and the work built under my direction.", "How I operate"),
   "career.html": ("Career Overview: Patrick Severs",
@@ -20,9 +16,12 @@ PAGES = {
 NAV_ITEMS = [
   ("gtm-leadership.html", "Previous work"),
   ("how-i-operate.html", "How I operate"),
-  ("human-data-operating-layer.html", "Human Data"),
-  ("agent-company.html", "Now"),
   ("career.html", "Career"),
+]
+
+REDIRECTS = [
+  ("human-data-operating-layer.html", "/gtm-leadership.html#human-data", "Human Data"),
+  ("agent-company.html", "/#now", "What I'm working on now"),
 ]
 
 def head(fn, title, desc):
@@ -104,33 +103,52 @@ FOOTER = '''<footer class="footer" id="contact">
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/loops.js"></script>
 <script src="assets/js/riso.js" defer></script>
 </body>
 </html>
 '''
 
+LOOP_RE = re.compile(r'<!--loop:([a-z0-9-]+)(?::(\d+):(\d+))?-->')
 
-PLATE_IMG = re.compile(r'<img src="assets/images/plates/plate-([a-m])\.jpg"[^>]*>')
+def loop_media(m):
+    stem, w, h = m.group(1), m.group(2) or "1280", m.group(3) or "714"
+    jpg = f"assets/images/loops/{stem}.jpg"
+    mp4 = OUT/"assets"/"video"/f"loop-{stem}.mp4"
+    webm = OUT/"assets"/"video"/f"loop-{stem}.webm"
+    img = f'<img src="{jpg}" alt="" width="{w}" height="{h}">'
+    if not mp4.exists():
+        return f'<div class="loop-media">{img}</div>'
+    sources = ""
+    if webm.exists():
+        sources += f'<source src="assets/video/loop-{stem}.webm" type="video/webm">'
+    sources += f'<source src="assets/video/loop-{stem}.mp4" type="video/mp4">'
+    return (
+        f'<div class="loop-media"><video autoplay muted loop playsinline preload="metadata" '
+        f'disablepictureinpicture disableremoteplayback poster="{jpg}" width="{w}" height="{h}">'
+        f'{sources}{img}</video></div>'
+    )
 
-def animate_plates(body):
-    """Where src/assets/video/plate-<x>.mp4 exists, wrap the plate image in a muted looping video.
-    The JPEG stays the poster and the fallback content, so the still remains the source of truth."""
-    def swap(m):
-        L = m.group(1)
-        if not (OUT/"assets"/"video"/f"plate-{L}.mp4").exists(): return m.group(0)
-        return (f'<video autoplay muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback '
-                f'poster="assets/images/plates/plate-{L}.jpg" width="1400" height="933">'
-                f'<source src="assets/video/plate-{L}.webm" type="video/webm"><source src="assets/video/plate-{L}.mp4" type="video/mp4">'
-                f'{m.group(0)}</video>')
-    return PLATE_IMG.sub(swap, body)
-
+def write_redirect(fn, dest, label):
+    canonical = "https://patricksevers.com" + dest
+    (OUT/fn).write_text(
+        "<!doctype html>\n<html lang=\"en\">\n<head>\n"
+        "<meta charset=\"UTF-8\">\n"
+        f"<meta http-equiv=\"refresh\" content=\"0; url={dest}\">\n"
+        f"<link rel=\"canonical\" href=\"{canonical}\">\n"
+        f"<title>Moved: {label}</title>\n</head>\n"
+        f"<body><p>This page moved to <a href=\"{dest}\">{label}</a>.</p></body>\n</html>\n"
+    )
+    print("wrote redirect", fn)
 
 for fn, (title, desc, _) in PAGES.items():
-    body = animate_plates((S/"pages"/fn).read_text())
+    body = LOOP_RE.sub(loop_media, (S/"pages"/fn).read_text())
     page = head(fn, title, desc) + nav(fn) + body + FOOTER
-    # Refresh cached styles and behavior whenever their contents change.
-    for asset in ("assets/css/style.css", "assets/js/main.js", "assets/js/riso.js"):
+    for asset in ("assets/css/style.css", "assets/js/main.js", "assets/js/riso.js", "assets/js/loops.js"):
         version = hashlib.sha256((OUT/asset).read_bytes()).hexdigest()[:12]
         page = page.replace(f'"{asset}"', f'"{asset}?v={version}"')
     (OUT/fn).write_text(page)
     print("wrote", fn)
+
+for fn, dest, label in REDIRECTS:
+    write_redirect(fn, dest, label)
