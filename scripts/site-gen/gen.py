@@ -2,7 +2,9 @@ import hashlib, re, sys, pathlib
 S = pathlib.Path(__file__).parent
 OUT = pathlib.Path(__file__).resolve().parents[2]/"src"
 
-PAGES = {
+# Active pages are rendered from templates. Legacy routes remain as explicit redirects
+# so established links continue to work without presenting duplicated content.
+ACTIVE_PAGES = {
   "index.html": ("Patrick Severs: GTM Leadership, Teams and AI Operations",
      "I turn strategy into revenue. Go-to-market leadership, team building, and AI operations, with the performance record to back it up.", "Home"),
   "gtm-leadership.html": ("Previous Performance: Patrick Severs",
@@ -19,7 +21,7 @@ NAV_ITEMS = [
   ("career.html", "Career"),
 ]
 
-REDIRECTS = [
+LEGACY_REDIRECTS = [
   ("human-data-operating-layer.html", "/gtm-leadership.html#human-data", "Human Data"),
   ("agent-company.html", "/#now", "What I'm working on now"),
 ]
@@ -141,7 +143,7 @@ def write_redirect(fn, dest, label):
     )
     print("wrote redirect", fn)
 
-for fn, (title, desc, _) in PAGES.items():
+for fn, (title, desc, _) in ACTIVE_PAGES.items():
     body = LOOP_RE.sub(loop_media, (S/"pages"/fn).read_text())
     page = head(fn, title, desc) + nav(fn) + body + FOOTER
     for asset in ("assets/css/style.css", "assets/js/main.js", "assets/js/riso.js", "assets/js/loops.js"):
@@ -150,5 +152,5 @@ for fn, (title, desc, _) in PAGES.items():
     (OUT/fn).write_text(page)
     print("wrote", fn)
 
-for fn, dest, label in REDIRECTS:
+for fn, dest, label in LEGACY_REDIRECTS:
     write_redirect(fn, dest, label)
