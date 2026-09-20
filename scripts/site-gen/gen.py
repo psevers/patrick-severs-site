@@ -43,10 +43,10 @@ def head(fn, title, desc):
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://patricksevers.com/assets/images/og-image.png">
 <link rel="canonical" href="{url}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23f6f4ee' stroke='%231b1a17' stroke-width='6'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-weight='600' fill='%231f4fd1' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23ffffff' stroke='%23101010' stroke-width='6'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='58' font-weight='700' fill='%23254e70' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="{'home' if fn == 'index.html' else 'sub'}">
@@ -66,7 +66,7 @@ def nav(fn):
     )
     return f'''<nav class="nav">
   <div class="container">
-    <a href="/" class="nav-logo">Patrick Severs</a>
+    <a href="/" class="nav-logo">Patrick Severs <span>/ GTM</span></a>
     <ul class="nav-links" data-nav-links>
       {items}
       <li><a href="https://calendly.com/pvsevers/30min" class="nav-cta" target="_blank" rel="noopener">Book 30 minutes</a></li>
@@ -92,7 +92,7 @@ FOOTER = '''<footer class="footer" id="contact">
       <aside class="rail colophon m"><a href="assets/pdf/patrick-severs-resume.pdf" target="_blank" rel="noopener">Resume, one page</a><br><a href="https://calendly.com/pvsevers/30min" target="_blank" rel="noopener">Book 30 minutes</a><br><a href="https://www.linkedin.com/in/pvsevers/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://github.com/psevers" target="_blank" rel="noopener">GitHub</a></aside>
     </div>
     <div class="colophon-line fn">
-      <span>Set in Caveat and Nunito Sans. Every figure on this site has a date. Revised September 2026.</span>
+      <span>Built around the work, the systems behind it, and the next revenue problem. Revised September 2026.</span>
       <button type="button" class="theme-toggle" data-theme-toggle>Dark mode</button>
     </div>
     <div class="footer-meta">

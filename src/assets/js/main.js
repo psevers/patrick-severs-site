@@ -71,7 +71,7 @@
   // through one SVG filter per element. The eyebrow and headline get it on load,
   // section heads get a shorter pass when scrolled into view, body copy fades up.
   // Nothing runs under reduced motion, so the static render is untouched.
-  if (!reducedMotion && window.requestAnimationFrame && document.fonts) {
+  if (false && !reducedMotion && window.requestAnimationFrame && document.fonts) {
     var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
     var filterSeq = 0;
 
