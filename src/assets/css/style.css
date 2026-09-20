@@ -409,10 +409,10 @@ hr, .rule-line { border: 0; height: 1px; background: var(--line); }
   .nav-links a { display: block; min-height: 44px; padding: var(--space-3) 0; font-size: var(--text-base); }
 }
 @media (max-width: 520px) {
-  .nav .container { gap: var(--space-2); }
-  .nav-logo { font-size: 1.2rem; }
+  .nav .container { width: calc(100% - 2rem); gap: var(--space-2); }
+  .nav-logo { flex: 0 1 auto; min-width: 0; font-size: 1.2rem; overflow: hidden; text-overflow: clip; }
   .nav-logo span { display: none; }
-  .nav-right { gap: var(--space-2); margin-left: auto; }
+  .nav-right { flex: 0 0 auto; gap: var(--space-2); margin-left: auto; }
   .nav .theme-toggle { min-width: 44px; padding-inline: var(--space-2); font-size: 0; justify-content: center; }
   .nav .theme-toggle::after { content: '◐'; font-size: 1.125rem; line-height: 1; }
   .nav-toggle { min-width: 44px; min-height: 44px; padding-inline: var(--space-2); justify-content: center; }
