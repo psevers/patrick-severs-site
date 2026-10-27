@@ -161,3 +161,11 @@
 - Visual system is the 32px gridboard plus cream-multiply Flova drawings. Remaining riso plates (fork, building, boat, shop doors) and the inline SVG whiteboards they stood in for are out of the layout. Revenue Brain and One Operator stay on How I operate.
 - Preview deploys to Vercel (`patrick-severs-site.vercel.app`). `patricksevers.com` stays on Cloudflare Pages until an explicit ship. Resume PDF headline and `og-image.png` are out of this pass.
 
+## 2026-10-27 UTC: enterprise sales and AI-adoption calibration
+
+- Patrick authorized website calibration after reviewing the new resume, explicitly preserving the current style and invoking Apple Design and Emil Design Engineering. The observed baseline is the current Inter/blue editorial site, with green-black/sage dark mode. Earlier handwritten and terminal-style design entries remain historical.
+- Local-preview choices, not approved final copy: lead with account growth and practical AI adoption; add the Box expansion story, clearly labeled quota performance, the seven-person G2i adoption effort, SROS as a product used by families, and the recurring personal claims agent. Keep the existing portrait, illustrations, testimonials, G2i record, and page routes.
+- Add Building as an anchor link, preserve legacy redirects, use the approved resume under a new asset filename, and replace the old social-image reference with a new matching image. The prior PDF and social image remain intact.
+- Improve keyboard navigation, focus, menu state, reduced-motion visibility, narrow-screen grids, and dark-mode contrast. No new animation library or visual re-skin.
+- Content boundaries, implementation judgments, verification, and independent review results are in `docs/openai-website-calibration.md`. No commit, push, deployment, or publication was authorized or performed in this pass.
+

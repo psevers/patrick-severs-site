@@ -5,19 +5,20 @@ OUT = pathlib.Path(__file__).resolve().parents[2]/"src"
 # Active pages are rendered from templates. Legacy routes remain as explicit redirects
 # so established links continue to work without presenting duplicated content.
 ACTIVE_PAGES = {
-  "index.html": ("Patrick Severs: GTM Leadership, Teams and AI Operations",
-     "I turn strategy into revenue. Go-to-market leadership, team building, and AI operations, with the performance record to back it up.", "Home"),
+  "index.html": ("Patrick Severs: Enterprise Sales and AI Adoption",
+     "Enterprise account growth, practical AI adoption, and hands-on building with OpenAI models. Customer work at Box, Braintrust, ADP, and G2i.", "Home"),
   "gtm-leadership.html": ("Previous Performance: Patrick Severs",
-     "Revenue growth, new business lines, and cross-functional leadership. The G2i record: 122% growth, four lines from one, and the team behind it.", "Previous performance"),
+     "Box expansion from 100 to 3,000 seats, quota attainment at Braintrust and ADP, and the G2i growth record. Enterprise sales and adoption in practice.", "Previous performance"),
   "how-i-operate.html": ("How I Operate: Patrick Severs",
-     "How I lead people, put agents to work, and keep responsibility clear. Six operating rules, the agent fleet, and the work built under my direction.", "How I operate"),
+     "AI as a thought partner, a seven-person team's six-week adoption effort, and recurring OpenAI agent work. How Patrick Severs works with people and agents.", "How I operate"),
   "career.html": ("Career Overview: Patrick Severs",
-     "From enterprise sales to leading revenue teams and new business lines. Patrick Severs at Dell, ServiceSource, ADP, Box, Braintrust, G2i, and The Agent Company.", "Career"),
+     "Enterprise sales, account expansion, revenue leadership, and practical AI adoption. Patrick Severs at Dell, ServiceSource, ADP, Box, Braintrust, G2i, and The Agent Company.", "Career"),
 }
 
 NAV_ITEMS = [
   ("gtm-leadership.html", "Previous work"),
   ("how-i-operate.html", "How I operate"),
+  ("/#now", "Building"),
   ("career.html", "Career"),
 ]
 
@@ -37,13 +38,15 @@ def head(fn, title, desc):
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://patricksevers.com/assets/images/og-image.png">
+<meta property="og:image" content="https://patricksevers.com/assets/images/enterprise-ai-social.png">
+<meta property="og:image:alt" content="Patrick Severs: enterprise sales and AI adoption. Box account expansion, ADP quota attainment, and G2i revenue growth.">
 <meta property="og:url" content="{url}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
-<meta name="twitter:image" content="https://patricksevers.com/assets/images/og-image.png">
+<meta name="twitter:image" content="https://patricksevers.com/assets/images/enterprise-ai-social.png">
+<meta name="twitter:image:alt" content="Patrick Severs: enterprise sales and AI adoption. Box account expansion, ADP quota attainment, and G2i revenue growth.">
 <link rel="canonical" href="{url}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23ffffff' stroke='%23101010' stroke-width='6'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='58' font-weight='700' fill='%23254e70' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,6 +62,7 @@ def head(fn, title, desc):
     <filter id="wb-rough" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4" xChannelSelector="R" yChannelSelector="G"/></filter>
   </defs>
 </svg>
+<a href="#main-content" class="skip-link">Skip to content</a>
 '''
 
 def nav(fn):
@@ -66,35 +70,37 @@ def nav(fn):
     items = "".join(
         '<li><a href="%s"%s>%s</a></li>' % (h, CUR if h == fn else "", l) for h, l in NAV_ITEMS
     )
-    return f'''<nav class="nav">
+    return f'''<nav class="nav" aria-label="Primary">
   <div class="container">
     <a href="/" class="nav-logo">Patrick Severs <span>/ GTM</span></a>
-    <ul class="nav-links" data-nav-links>
+    <ul class="nav-links" id="primary-navigation" data-nav-links>
       {items}
       <li><a href="https://calendly.com/pvsevers/30min" class="nav-cta" target="_blank" rel="noopener">Book 30 minutes</a></li>
     </ul>
     <div class="nav-right">
       <button type="button" class="theme-toggle" data-theme-toggle>Dark mode</button>
-      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
+      <button type="button" class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </div>
 </nav>
+<main id="main-content" tabindex="-1">
 '''
 
-FOOTER = '''<footer class="footer" id="contact">
+FOOTER = '''</main>
+<footer class="footer" id="contact">
   <div class="container">
     <div class="footer-inner row">
       <div class="footer-text main">
         <h2>Let's talk.</h2>
-        <p>Hiring a GTM leader, building a revenue team, or putting AI to work in the business? Let’s talk about what needs to change and how I can help.</p>
+        <p>Working on enterprise account growth or helping customers adopt AI? I'd like to talk about the customer problem and the result we can deliver.</p>
         <a href="mailto:pvsevers@gmail.com" class="mail">pvsevers@gmail.com</a>
       </div>
-      <aside class="rail colophon m"><a href="assets/pdf/patrick-severs-resume.pdf" target="_blank" rel="noopener">Resume, one page</a><br><a href="https://calendly.com/pvsevers/30min" target="_blank" rel="noopener">Book 30 minutes</a><br><a href="https://www.linkedin.com/in/pvsevers/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://github.com/psevers" target="_blank" rel="noopener">GitHub</a></aside>
+      <aside class="rail colophon m"><a href="assets/pdf/patrick-severs-enterprise-ai-resume.pdf" target="_blank" rel="noopener">Resume, one page</a><br><a href="https://calendly.com/pvsevers/30min" target="_blank" rel="noopener">Book 30 minutes</a><br><a href="https://www.linkedin.com/in/pvsevers/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://github.com/psevers" target="_blank" rel="noopener">GitHub</a></aside>
     </div>
     <div class="colophon-line fn">
-      <span>Built around the work, the systems behind it, and the next revenue problem. Revised September 2026.</span>
+      <span>Customer work, practical AI adoption, and what I'm building. Revised October 2026.</span>
       <button type="button" class="theme-toggle" data-theme-toggle>Dark mode</button>
     </div>
     <div class="footer-meta">

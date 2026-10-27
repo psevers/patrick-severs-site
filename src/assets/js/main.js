@@ -30,16 +30,27 @@
   var navToggle = document.querySelector('[data-nav-toggle]');
   var navLinks = document.querySelector('[data-nav-links]');
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
-      var open = navLinks.classList.toggle('is-open');
+    function setMenuOpen(open) {
+      navLinks.classList.toggle('is-open', open);
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    navToggle.addEventListener('click', function () {
+      setMenuOpen(!navLinks.classList.contains('is-open'));
     });
     navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () { navLinks.classList.remove('is-open'); });
+      link.addEventListener('click', function () { setMenuOpen(false); });
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && navLinks.classList.contains('is-open')) {
+        setMenuOpen(false);
+        navToggle.focus();
+      }
     });
   }
 
-  if ('IntersectionObserver' in window) {
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reducedMotion && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -58,7 +69,6 @@
   }
 
   // plate loops: under reduced motion the still (poster) is the whole experience
-  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reducedMotion) {
     document.querySelectorAll('.plate video').forEach(function (v) {
       var still = v.querySelector('img');
